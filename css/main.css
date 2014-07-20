@@ -1,0 +1,770 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+
+    /* Color */
+    background: rgb(245,245,245); /*whitesmoke*/
+    color: #222;
+
+    /* Overflow */
+    overflow-x:hidden;
+
+
+}
+
+html {
+
+    /* Font */
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    line-height: 1.4;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #1abc9c; /*turquoise*/
+    text-shadow: none;
+}
+
+::selection {
+    background: #1abc9c; /*turquoise*/
+    text-shadow: none;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/* General Styles
+========================================================================== */
+.section-content {
+
+    /* Layout */
+    padding-left: 5%;
+    padding-right: 5%;
+    display: block;
+    clear: both;
+
+    /* height */
+    min-height: 100vh;
+    overflow-x:hidden;
+}
+    
+    
+/* Body Content */
+.section-title{
+
+    /* Font */
+    font-size: 3em;
+    font-weight: 300;
+
+    /* Color */
+    color: #5f9ea0; /* cadet blue */
+
+    /* Padding */
+    padding-top:5%;
+
+    /* Clearfix */
+    clear: both;
+
+    /* Transistion */
+    -webkit-transition: color 2s ease-out;
+    -moz-transition: color 2s ease-out;
+    -o-transition: color 2s ease-out;
+    transition: color 2s ease-out;
+}
+.p-title{
+    /* display */
+    display: block;
+
+    /* Color */
+    background: #5f9ea0; /* cadet blue */
+    color:  #f5f5f5; /*whitesmoke*/
+
+    /* Font */
+    font-weight: lighter;
+    text-align: center;
+}
+.p-section h1{
+    /* Size */
+    width: 50%;
+
+    /* Layout */
+    padding: 1%;
+    text-align: center;
+    margin:auto;
+}
+
+
+/* Home
+========================================================================== */
+#home{
+    
+    /* Color */
+    color: #5f9ea0; /* cadet blue */
+
+    /* Layout */
+    padding-top: 0;
+    position: relative;
+    height: 100vh;
+
+    /* Text */
+    text-align: center;
+
+}
+
+.coral-background{
+    display: inline-table;
+    color:whitesmoke;
+    background: coral;
+    padding: 2%;
+}
+
+/* image of me */
+.home-img{
+
+    /* Background */
+    background: #1abc9c; /*turquoise*/
+    background: url('../img/with_the_mayor.jpg')  no-repeat center 40%; 
+   /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;*/
+    padding: 3%;
+    background-size: 160%;
+
+    /* Border */
+    border-radius: 50%;
+    border: 0.5em solid cadetblue;
+    /*border: 1em solid white;*/
+
+    /* Display */
+    height: 12em;
+    width: 12em;
+    margin:auto;
+    margin-top: 10%;
+}
+
+.img_wrapper img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 150ms;
+    -moz-transition: opacity 150ms;
+    -ms-transition: opacity 150ms;
+    transition: opacity 150ms;
+}
+    .img_wrapper.loaded img{
+        opacity: 1;
+    }
+.red{
+    color: crimson;
+}
+
+/* Nav Menu
+========================================================================== */
+#nav {
+
+    /* Layout */
+    margin: 0 0 3% 0;
+    padding: 0;
+    position: fixed;
+    list-style: none; 
+    width: 100%;
+    float: left;
+    vertical-align: middle;
+    top: 0;
+    z-index: 6;
+
+    /* Color */
+    color: cadetblue;
+    background: rgba(245,245,245,0.99); 
+}
+
+#home-link {
+    /* Layout */
+    float: left;
+    padding: 0% 10% 0% 3%;
+
+    /* Font */
+    font-size:2.3em;
+}
+
+#nav li:last-child{
+    float: left;
+}
+#nav li {
+
+    /* Layout */
+    float: right;
+    padding: 1.5%;
+    margin: 0; 
+    line-height: 2em;
+
+
+    /* Cursor */
+    cursor: pointer;    
+
+    /* Transistion */
+    -webkit-transition: background  200ms ease-in-out;
+    -moz-transition: background 200ms ease-in-out;
+    -ms-transition: background 200ms ease-in-out;
+    transition: background 200ms ease-in-out;
+}
+
+#nav a {
+    /* Layout */
+    display: block;
+
+    /* Text Decoration */
+    text-decoration: none;
+
+    /* Color */  
+    color: #5f9ea0; /* cadet blue */
+}
+#nav li:hover {
+    /* Color */
+    /*background-color: rgba(0,0,0,0.6);*/
+}
+
+#nav a {
+  /* Color */
+  color: cadetblue;
+
+  /* Text Decoration */
+  text-decoration: none;
+
+  /* Transition */
+  -webkit-transition: .2s ease;
+}
+#nav a:hover {
+  color: hotPink;
+}
+@media (-webkit-min-device-pixel-ratio:0) {
+*{margin-right:0;}
+  #nav a {
+    background-color: cadetblue;
+    background-image: -webkit-linear-gradient(left, hotPink 0%, coral 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-transition: .1s .2s;
+    -webkit-background-clip: text;
+  }
+  #nav a:hover {
+    background-position: 0 0;
+    color: transparent;
+    transition: .4s 0;
+  }
+
+}
+.row{
+    width: 100%;
+    clear: both;
+    display: table;
+    background-color: purple;
+    padding: 5%;
+}
+/* Jobs
+========================================================================== */
+.job, .project{
+    /* layout */
+    margin:3% 0 0 0;
+    width: 100%;
+    min-height: 5em;    
+    overflow: hidden;
+
+    /* color */
+    background: coral;     
+
+    position: relative;  
+    text-align: center;
+
+    /* Shadow */
+    -moz-box-shadow:    0.5em 0.5em 1em rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0.5em 0.5em 1em rgba(0,0,0,0.3);
+    box-shadow:         0.5em 0.5em 1em rgba(0,0,0,0.3);
+
+    /* Cursor */
+    /*cursor:pointer;*/
+
+
+
+    /* Transistion */
+    -webkit-transition: background-color .2s ease-in-out;
+    -moz-transition: background-color .2s ease-in-out;
+    -o-transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out;
+}
+.job:hover, .project:hover{
+    background-color: cadetblue;
+}
+.jobs-img, .project-img, .about-me-img{
+    /* display */
+    display: block;
+    height: 12.5em;
+
+    /* background */    
+    background-color: rgba(0,0,0,0.6);
+    background-position: right;
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.jobs-co-name, .project-title{  
+    /* Layout */
+    display: block;
+    padding-top: 8%;
+    padding-bottom: 2%;
+    z-index: 3;
+    /* Color */
+    color: #F5F5F5;
+}
+.jobs-text, .project-text{
+    /* Font */
+    font-size: 0.8em;
+    font-weight: 400;
+    text-align:left;
+    padding: 3%;
+    display:default;
+}
+.side-note{
+    /* Color */
+    color: rgba(245,245,245,0.7);
+}
+#ge-img{
+    background-image: url('../img/ge.jpg');
+    background-position: center bottom;
+}
+#cgi-img{
+    background-image: url('../img/cgiLogo.jpg'); 
+    background-position: center;
+}
+#hdc-img{
+    background-image: url('../img/hdc.jpg'); 
+    background-position: center bottom;
+}
+#kanm-img{
+    background-image: url('../img/kanm.png');
+    background-size:  300%; 
+    background-position: top left;
+}
+.border-shadow{
+       -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black;
+}
+
+
+
+/* Projects
+========================================================================== */
+#hdctools-img{
+    background-image: url('../img/hdctools.png'); 
+    background-position: left;
+}
+#smart-img{
+    background-image: url('../img/smart.png');
+    background-size:  300%;
+    background-position: center;
+}
+#horsu-raysu-img{
+    background-image: url('../img/horsu.png');
+    background-position: left;
+}
+#culture-hunt-img{
+    background-image: url('../img/culturehunt.png');
+    background-size:  cover;
+    background-position: right top;
+}
+#rubiks-cube-solver-img{
+    background-image: url('../img/cube-solver.png');
+    background-position: left;
+}
+#ray-tracer-img{
+    background-image: url('../img/raytracer.jpg');
+}
+#acronym-bot-img{
+    background-image: url('../img/acronymbot.png');
+    background-size:  100%;
+    background-position: right top;
+}
+#internets-img{
+    background-image: url('../img/cat.jpg');
+}
+/* About Me
+========================================================================== */
+#about-me-img-wrapper{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3%;
+}
+/* About Me Images Formatted above w/ .jobs-img */
+.about-me-img{
+    /* Layout */
+    margin-right: 1%;
+    width: 20%;
+    float: left;
+}
+.about-me-img:first-child{
+    margin-left: 7%;
+}
+#rock-climbing-img{
+    background-image: url('../img/rock-climbing.jpg');
+    /*background-size: 80%;*/
+    background-position: top;
+}
+#holding-cat-img{
+    background-image: url('../img/holding-a-cat.jpg');
+    background-position: 50% 10%;
+}
+#me-img{
+    background-image: url('../img/me.jpg');
+}
+#me-in-a-nutshell-img{
+    background-image: url('../img/me-in-a-nutshell.jpg');
+    background-size:  300%;
+    background-position: 70% 17.5%;
+}
+
+
+/* Contact
+========================================================================== */
+#contact-info-wrapper{
+    /* Layout */
+    position: absolute;
+    margin-top:2.5%;
+    width: 100%;
+    left:0;
+    z-index: 2;
+
+    /* Background */
+    background-color: rgba(155, 89, 182, 0.5);
+    background-image: url('../img/on-roof.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+    /* Font */
+    color: #F5F5F5;
+    font-size: 1.5em;
+}
+#contact-info{
+    margin:10%;
+}
+#contact-info > .side-note{
+    font-size: 0.75em;
+}
+.email a, a:visited{
+    text-decoration: none;
+    color: #F5F5F5;
+}
+/* Footer
+========================================================================== */
+footer{
+    padding: 3%;
+    text-align: center;
+    background-color: #EAEAEA;
+}
+/* Column Layout
+========================================================================== */
+.col1{
+    margin-left: 5%;
+    width: 90%;
+    margin-right: 5%;
+}
+.col2{
+    float:left;
+    margin-left: 3%;
+    width: 45.5%;
+}
+.col3{
+    margin-left: 3%;
+    width: 29.33;
+}
+
+.col4 > div{
+    float:left;
+    margin-left: 3.3333%;
+    width: 20%;
+    min-width: 11em;
+
+}
+.col4{
+    clear: both;
+    background: purple;
+}
+
+/* Slide in animation
+========================================================================== */
+
+.come-in {
+    -webkit-transform: translateY(150px);
+    -moz-transform: translateY(150px);
+    -o-transform: translateY(150px);
+    -ms-transform: translateY(150px);
+    transform: translateY(150px);
+    -webkit-animation: come-in 1s ease forwards;
+    animation: come-in 1s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+}
+.already-visible {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-animation:none;
+    animation: none;
+}
+
+@-webkit-keyframes come-in {
+  to {  -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        transform: translateY(0px); 
+    }
+}
+@keyframes come-in {
+  to {  -webkit-transform: translateY(0px); `
+        -moz-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        transform: translateY(0px); 
+    }
+}
+/* Column Layout
+========================================================================== */
+a.obvious-link,
+a.obvious-link:visited {
+
+    /* Font */
+    color:#F5F5F5; /* Whitesmoke */
+    text-decoration: underline;
+    font-size: 1.2em;
+    font-weight: 300;
+
+    /* Visibility - set to hidden, until implemented */
+    visibility: hidden;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Transistion */
+    -webkit-transition: font-size .2s ease-in-out;
+    -moz-transition: font-size .2s ease-in-out;
+    -o-transition: font-size .2s ease-in-out;
+    transition: font-size .2s ease-in-out;
+}
+a.obvious-link:hover,
+a.obvious-link:visited:hover{
+    font-size: 1.2em;
+}
+
+/* Pop Up
+========================================================================== */
+#read-more{
+
+    /* Layout */
+    position: fixed;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 5;
+    top: 0; left: 0;
+
+    /* Size */
+    width: 100%;
+    height: 100%;
+
+    /* Content Layout */
+    vertical-align: middle;
+    text-align: center;
+
+    /* Display */
+    display: none;
+}
+#read-more-content{
+
+
+    /* Position */
+    position: absolute;
+    margin-left: 25%;
+    z-index: 7;
+
+    /* Size */
+    width: 50%;
+    height: 100%;
+
+    /* Overflow */
+    overflow-y: scroll; 
+
+    /* Color */
+    background-color: coral;
+    color: #F5F5F5;
+
+    /* Shadow */
+    -moz-box-shadow: 0 0 20px black; 
+    -webkit-box-shadow: 0 0 20px black; 
+    box-shadow: 0 0 20px black;
+}
+#read-more-content .section-title{
+    color: #F5F5F5;
+
+    /* Background */
+    background-color: rgba(155, 89, 182,0.5);
+    background-image: url('../img/horsu.png');
+    background-attachment: fixed;
+    background-position: center;
+}
+#read-more-content p{
+    text-align: left;
+}
+/* Pop Up
+========================================================================== */
+#hacker{
+
+    /* Display */
+    display: block;
+
+    /* Position */
+    position: fixed;
+
+    /* Size */
+    width: 75vh;
+    height: 75vh;
+
+
+    /* Shadow */
+    -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black;
+}
+
+/* ==========================================================================
+   Media Queries for Responsive Design.
+   ========================================================================== */
+
+@media only screen and (min-width: 1405px) {
+    #home-link2{display:none;}
+}
+
+@media only screen and (max-width: 1405px) {
+  /* I know I shouldn't use !important,
+     but it was being overridden by the #nav a
+     selector, feel free to tell me why the id 
+     selector is being overridden by a class
+     selector, because I would love to know!
+   */
+  #home-link{display: none !important ;}
+  #home-link2{display:block;}
+  .section-title{padding-top: 10%;}
+  .col4 > div{ width: 90%;}
+  .about-me-img-wrapper{margin:0;}
+  .about-me-img{width: 90%; margin-left: 5%; margin-right: 5%;}
+  .about-me-img:first-child{margin-left: 5%;}
+  .job:hover,.project:hover{background-color: coral;}
+  #nav {font-size: 0.7em;}
+  .atgmail{font-size:0.4em;}
+  .come-in {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    }
+    .about-me-img:not(:first-child){
+        display: none;
+    }
+
+  }
+}
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+
+
+
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
