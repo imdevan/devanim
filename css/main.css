@@ -101,10 +101,9 @@ fieldset {
 
     /* height */
     min-height: 100vh;
-    overflow-x:hidden;
 }
-    
-    
+
+
 /* Body Content */
 .section-title{
 
@@ -153,7 +152,7 @@ fieldset {
 /* Home
 ========================================================================== */
 #home{
-    
+
     /* Color */
     color: #5f9ea0; /* cadet blue */
 
@@ -179,7 +178,7 @@ fieldset {
 
     /* Background */
     background: #1abc9c; /*turquoise*/
-    background: url('../img/with_the_mayor.jpg')  no-repeat center 40%; 
+    background: url('../img/with_the_mayor.jpg')  no-repeat center 40%;
    /* -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;*/
@@ -223,7 +222,7 @@ fieldset {
     margin: 0 0 3% 0;
     padding: 0;
     position: fixed;
-    list-style: none; 
+    list-style: none;
     width: 100%;
     float: left;
     vertical-align: middle;
@@ -232,7 +231,7 @@ fieldset {
 
     /* Color */
     color: cadetblue;
-    background: rgba(245,245,245,0.99); 
+    background: rgba(245,245,245,0.99);
 }
 
 #home-link {
@@ -252,12 +251,12 @@ fieldset {
     /* Layout */
     float: right;
     padding: 1.5%;
-    margin: 0; 
+    margin: 0;
     line-height: 2em;
 
 
     /* Cursor */
-    cursor: pointer;    
+    cursor: pointer;
 
     /* Transistion */
     -webkit-transition: background  200ms ease-in-out;
@@ -273,7 +272,7 @@ fieldset {
     /* Text Decoration */
     text-decoration: none;
 
-    /* Color */  
+    /* Color */
     color: #5f9ea0; /* cadet blue */
 }
 #nav li:hover {
@@ -325,19 +324,15 @@ fieldset {
     /* layout */
     margin:3% 0 0 0;
     width: 100%;
-    min-height: 5em;    
-    overflow: hidden;
+    /*min-height: 5em;*/
+    height: 100%;
 
     /* color */
-    background: coral;     
+    /*background: coral;*/
 
-    position: relative;  
+    position: relative;
     text-align: center;
 
-    /* Shadow */
-    -moz-box-shadow:    0.5em 0.5em 1em rgba(0,0,0,0.3);
-    -webkit-box-shadow: 0.5em 0.5em 1em rgba(0,0,0,0.3);
-    box-shadow:         0.5em 0.5em 1em rgba(0,0,0,0.3);
 
     /* Cursor */
     /*cursor:pointer;*/
@@ -350,22 +345,28 @@ fieldset {
     -o-transition: background-color .2s ease-in-out;
     transition: background-color .2s ease-in-out;
 }
+
+.job ul, .project ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
 .job:hover, .project:hover{
-    background-color: cadetblue;
+    /*background-color: cadetblue;*/
 }
 .jobs-img, .project-img, .about-me-img{
     /* display */
     display: block;
     height: 12.5em;
 
-    /* background */    
+    /* background */
     background-color: rgba(0,0,0,0.6);
     background-position: right;
     background-size: fill;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.jobs-co-name, .project-title{  
+.jobs-co-name, .project-title{
     /* Layout */
     display: block;
     padding-top: 8%;
@@ -381,6 +382,7 @@ fieldset {
     text-align:left;
     padding: 3%;
     display:default;
+
 }
 .side-note{
     /* Color */
@@ -391,16 +393,16 @@ fieldset {
     background-position: center bottom;
 }
 #cgi-img{
-    background-image: url('../img/cgiLogo.jpg'); 
+    background-image: url('../img/cgiLogo.jpg');
     background-position: center;
 }
 #hdc-img{
-    background-image: url('../img/hdc.jpg'); 
+    background-image: url('../img/hdc.jpg');
     background-position: center bottom;
 }
 #kanm-img{
     background-image: url('../img/kanm.png');
-    background-size:  300%; 
+    background-size:  300%;
     background-position: top left;
 }
 .border-shadow{
@@ -412,7 +414,7 @@ fieldset {
 /* Projects
 ========================================================================== */
 #hdctools-img{
-    background-image: url('../img/hdctools.png'); 
+    background-image: url('../img/hdctools.png');
     background-position: left;
 }
 #smart-img{
@@ -577,16 +579,128 @@ footer{
   to {  -webkit-transform: translateY(0px);
         -moz-transform: translateY(0px);
         -o-transform: translateY(0px);
-        transform: translateY(0px); 
+        transform: translateY(0px);
     }
 }
 @keyframes come-in {
   to {  -webkit-transform: translateY(0px); `
         -moz-transform: translateY(0px);
         -o-transform: translateY(0px);
-        transform: translateY(0px); 
+        transform: translateY(0px);
     }
 }
+
+/* 3D Effects
+========================================================================== */
+
+/* Set Perspective */
+  .threedeecontainer {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
+
+    /* To test the location */
+     background-color: transparent;
+     height: 100%;
+  }
+
+    /* Container for 3d elements */
+  .container {
+    /* Layout */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* Cursor */
+    cursor:pointer;
+
+    /* Maintain 3d state */
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+   /* Moved to javascript for dyno
+    -webkit-transform-origin: 100px 0 -100px;
+    -moz-transform-origin: 100px 0 -100px;
+    -ms-transform-origin: 100px 0 -100px;
+    -o-transform-origin: 100px 0 -100px;
+    transform-origin: 100px 0 -100px;*/
+
+
+  }
+
+  .c2 .offsetable {
+    background: cadetblue;
+    color: #FFF;
+  }
+
+  .c1 .offsetable {
+    background: coral;
+    color: #FFF;
+  }
+
+  .offsetable {
+
+    display:table;
+    /* Color */
+    color: #333;
+
+    /* Layout */
+    margin: 0 auto 5px auto;
+    /*line-height: 10em;*/
+    text-align: center;
+    position: relative;
+
+    /* hide backface */
+    -webkit-backface-visibility: hidden;
+
+        /* Transition */
+    -webkit-transition: -webkit-transform 1s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    -moz-transition: -moz-transform 1s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    -ms-transition: -ms-transform 1s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    -o-transition: -o-transform 1s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    transition: transform 1s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+
+
+    /* Shadow */
+    -webkit-box-shadow: 0.5em 0.5em 1em rgba(0,0,0,0.3);
+    -moz-box-shadow:    0.5em 0.5em 1em rgba(0,0,0,0.3);
+    box-shadow:         0.5em 0.5em 1em rgba(0,0,0,0.3);
+
+
+/*  Moved to javascript for dyno
+    -webkit-transform: translateZ(-100px) rotateY(0) translateZ(100px);
+    -moz-transform: translateZ(-100px) rotateY(0) translateZ(100px);
+    -ms-transform: translateZ(-100px) rotateY(0) translateZ(100px);
+    -o-transform: translateZ(-100px) rotateY(0) translateZ(100px);
+    transform: translateZ(-100px) rotateY(0) translateZ(100px);
+  }
+*/
+  }
+
+    /* Set up hidden face */
+  .container.rotated {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+
+/* TWIST THE FACES!*/
+/* Moved to javascript for dyno
+  #threedeecontainer.twisted .offsetable {
+    -webkit-transform: translateZ(-100px) rotateY(-90deg) translateZ(100px);
+    -moz-transform: translateZ(-100px) rotateY(-90deg) translateZ(100px);
+    -ms-transform: translateZ(-100px) rotateY(-90deg) translateZ(100px);
+    -o-transform: translateZ(-100px) rotateY(-90deg) translateZ(100px);
+    transform: translateZ(-100px) rotateY(-90deg) translateZ(100px);
+  }*/
+
 /* Column Layout
 ========================================================================== */
 a.obvious-link,
@@ -599,7 +713,7 @@ a.obvious-link:visited {
     font-weight: 300;
 
     /* Visibility - set to hidden, until implemented */
-    visibility: hidden;
+    /*visibility: hidden;*/
 
     /* Cursor */
     cursor: pointer;
@@ -648,17 +762,11 @@ a.obvious-link:visited:hover{
     width: 50%;
     height: 100%;
 
-    /* Overflow */
-    overflow-y: scroll; 
 
     /* Color */
     background-color: coral;
     color: #F5F5F5;
 
-    /* Shadow */
-    -moz-box-shadow: 0 0 20px black; 
-    -webkit-box-shadow: 0 0 20px black; 
-    box-shadow: 0 0 20px black;
 }
 #read-more-content .section-title{
     color: #F5F5F5;
@@ -702,7 +810,7 @@ a.obvious-link:visited:hover{
 @media only screen and (max-width: 1405px) {
   /* I know I shouldn't use !important,
      but it was being overridden by the #nav a
-     selector, feel free to tell me why the id 
+     selector, feel free to tell me why the id
      selector is being overridden by a class
      selector, because I would love to know!
    */
