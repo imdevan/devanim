@@ -1,8 +1,11 @@
-(function($){
+"use strict";
+(function($) {
 	/* Slide in from bottom */
 	/* @author Sam Sehnert */
 	/* http://codepen.io/chriscoyier/pen/DjmJe */
 
+  /* Slide up when visible function
+  ========================================================================== */
   $.fn.visible = function(partial) {
     
       var $t            = $(this),
@@ -17,136 +20,73 @@
     return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
 
   };
-    
+
 })(jQuery);
 
 
-/* THREE DEE EFFECTS */
-/* Variables */    
-var $3dcontainer = $('.threedeecontainer'),
-        $container = $('.container'),
-        $offsetable = $('.offsetable'),
-        $twisted = $('#threedeecontainer.twisted .offsetable'),
-        halfWidth = $offsetable.outerWidth()/2 + 'px',
-        sideView = false;
+/* Read More 
+========================================================================== */
+document.write("<scr" + "ipt type='text/javascript' src='js/read-more.js'><" + "/scr" + "ipt>");
 
-  /* Set threedeecontainer to content height */
-  $3dcontainer.each(function(index){
-    // setHeight = $(this).find(".offsetable").height();
-    setHeight = $(this).height();
-    // alert(Number(setHeight));
-  });
+/* Read More Variables */
+var rmButton = $('.read-more-button'),
+    rmExitButton = $('.read-more-exit-button'),
+    rmTitle = $('.read-more-title'),
+    rmDescription = $('.read-more-description p'),
+    rmBackground = $('.read-more-bg'),
+    rmContent = $('.read-more-content');
 
-  /* Intial rotation */
-    $container.css({
-      '-webkit-transform-origin': halfWidth + ' 0 -' + halfWidth,
-      '-moz-transform-origin': halfWidth + ' 0 -' + halfWidth,
-      '-o-transform-origin': halfWidth + ' 0 -' + halfWidth,
-      'transform-origin': halfWidth + ' 0 -' + halfWidth
-    });
-    
-    /* Initial rotation */
-    $offsetable.css({
-      '-webkit-transform': 'translateZ(-' + halfWidth + ') rotateY(0) translateZ(' + halfWidth + ')',
-      '-moz-transform': 'translateZ(-' + halfWidth + ') rotateY(0) translateZ(' + halfWidth + ')',
-      '-o-transform': 'translateZ(-' + halfWidth + ') rotateY(0) translateZ(' + halfWidth + ')',
-      'transform': 'translateZ(-' + halfWidth + ') rotateY(0) translateZ(' + halfWidth + ')'
-    });
-  
-    /* Event Handler */ 
-    $3dcontainer.on('click', function(e) {
-      
-      /* If not turned */
-      if(sideView === false){
-        /* Turn left! */
-        $('.offsetable', this).css({
-          '-webkit-transform': 'translateZ(-' + halfWidth + ') rotateY(-90deg) translateZ(' + halfWidth + ')',
-          '-ms-transform': 'translateZ(-' + halfWidth + ') rotateY(-90deg) translateZ(' + halfWidth + ')',
-          '-o-transform': 'translateZ(-' + halfWidth + ') rotateY(-90deg) translateZ(' + halfWidth + ')',
-          'transform': 'translateZ(-' + halfWidth + ') rotateY(-90deg) translateZ(' + halfWidth + ')'
-        });
-        
-        sideView = true;
-      }
-      /* If turned */
-      else{
-        /* Turn right! */
-        $offsetable.css({
-          '-webkit-transform': 'translateZ(-' + halfWidth + ') rotateY(0) translateZ(' + halfWidth + ')',
-          '-ms-transform': 'translateZ(-' + halfWidth + ') rotateY(0) translateZ(' + halfWidth + ')',
-          '-o-transform': 'translateZ(-' + halfWidth + ') rotateY(0) translateZ(' + halfWidth + ')',
-          'transform': 'translateZ(-' + halfWidth + ') rotateY(0) translateZ(' + halfWidth + ')'
-        });
-        
-        sideView = false;
-      } 
-      
-      
-    }); 
-      
-      // var $c1 = $('.c1');
-      // $c1.each(function(i){
-      //   alert(i);
-      // });
+/* Read More Show */
+rmButton.on('click', function(){
+  var _id = $(this).attr('id').replace('read-more-', '');
+  var _this = ReadMore[_id];
 
-      $c1 = $('.c1');
-      $c2 = $('.c2');
-      var $c1off = $('.c1 > .offsetable');
-      var $c2off = $('.c2 > .offsetable ');
-      var $3d = $('.threedeecontainer');
-      // $c2off.outerWidth($c1off.outerWidth());
-      // $c2off.height($c1off.height());
-      // $3d.height($('.threedeecontainer > .c1 > .offsetable ').height());
-      // $c2.outerWidth($c1.outerWidth());
-      // $c2.height($c1.height());
+  rmTitle.html(_this.title);
+  rmDescription.html(_this.description);
+  rmBackground.fadeIn('0.1s');
+  rmContent.addClass('p-zoom-in');
+});
 
-      $.each($c1off, function(i, value){
-        // c implies current
-        var c1index = $c1off.index($(this)),
-            thisC2 = $($c2off.get(c1index)),
-            this3d = $($3d.get(c1index));
+/* Read More Exit */
+rmExitButton.on('click', function(){
+    rmContent.removeClass('p-zoom-in');
+    rmBackground.fadeOut('fast');
+});
 
-        this3d.height($(this).height());
-        thisC2.height($(this).height());
-        thisC2.outerWidth($(this).outerWidth());
-            // a??lert();
+rmBackground.on('click', function(){
+    rmContent.removeClass('p-zoom-in');
+    rmBackground.fadeOut('fast');
+});
+rmContent.on('click', function(event){
+  event.stopPropagation();
+});
 
-        // c2c.height(c1c.height());
-        // c2c.outerWidth(c1c.outerWidth());
-      });
-      
-/*
-css changed to be dynamic:
+/* Module Slide In
+========================================================================== */
 
-.container -> transform-origin: 100px 0 -100px;
-.offsetable -> transform: translateZ(-100px) rotateY(0) translateZ(100px);
-#threedeecontainer.twisted .offsetable -> transform: translateZ(-100px) rotateY(-90deg) translateZ(100px);
-
-*/
-
-
-
+/* Module Slide In Variables */
 var win = $(window);
+var allModules = $(".module");
 
-var allMods = $(".module");
-
-allMods.each(function(i, el) {
+/* Module Slide In Assignment */
+allModules.each(function(i, el) {
   var el = $(el);
   if (el.visible(true)) {
     el.addClass("already-visible"); 
   } 
 });
 
-win.scroll(function(event) {
-  
-  allMods.each(function(i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      el.addClass("come-in"); 
-    } 
+/* Module Slide In Scroll */
+  win.scroll(function(event) {
+    allModules.each(function(i, el) {
+      var el = $(el);
+      if (el.visible(true)) {
+        el.addClass("come-in"); 
+      } 
+    });
+    
   });
-  
-});
+
 /*
 	http://www.ixistore.be/
 	- implement their color change 
