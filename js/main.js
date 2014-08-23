@@ -24,9 +24,8 @@
 })(jQuery);
 
 
-/* Read More 
+/* Variables
 ========================================================================== */
-document.write("<scr" + "ipt type='text/javascript' src='js/read-more.js'><" + "/scr" + "ipt>");
 
 /* Read More Variables */
 var rmButton = $('.read-more-button'),
@@ -34,7 +33,18 @@ var rmButton = $('.read-more-button'),
     rmTitle = $('.read-more-title'),
     rmDescription = $('.read-more-description p'),
     rmBackground = $('.read-more-bg'),
-    rmContent = $('.read-more-content');
+    rmContent = $('.read-more-content'),
+    scrollPosition;
+
+/* Module Slide In Variables */
+var win = $(window);
+var allModules = $(".module");
+
+var navLi = $('#nav li');
+
+/* Read More 
+========================================================================== */
+document.write("<scr" + "ipt type='text/javascript' src='js/read-more.js'><" + "/scr" + "ipt>");
 
 /* Read More Show */
 rmButton.on('click', function(){
@@ -43,30 +53,36 @@ rmButton.on('click', function(){
 
   rmTitle.html(_this.title);
   rmDescription.html(_this.description);
-  rmBackground.fadeIn('0.1s');
+  // rmBackground.fadeIn('0.1s');
+  rmBackground.fadeIn('0.1s').css('top',scrollPosition);
   rmContent.addClass('p-zoom-in');
 });
 
 /* Read More Exit */
 rmExitButton.on('click', function(){
     rmContent.removeClass('p-zoom-in');
-    rmBackground.fadeOut('fast');
+    rmBackground.fadeOut('0.1s');
 });
 
-rmBackground.on('click', function(){
-    rmContent.removeClass('p-zoom-in');
-    rmBackground.fadeOut('fast');
+/* Read More Exit When document clicked outside container*/
+$(document).mouseup(function (e)
+{
+    // var container = $("YOUR CONTAINER SELECTOR");
+
+    if (!rmContent.is(e.target) // if the target of the click isn't the container...
+        && rmContent.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+      rmContent.removeClass('p-zoom-in');
+      rmBackground.fadeOut('0.1s');
+    }
 });
+
 rmContent.on('click', function(event){
   event.stopPropagation();
 });
 
 /* Module Slide In
 ========================================================================== */
-
-/* Module Slide In Variables */
-var win = $(window);
-var allModules = $(".module");
 
 /* Module Slide In Assignment */
 allModules.each(function(i, el) {
@@ -76,18 +92,35 @@ allModules.each(function(i, el) {
   } 
 });
 
-/* Module Slide In Scroll */
+
+/* Window Scroll Function
+========================================================================== */
+
   win.scroll(function(event) {
+    scrollPosition = $(this).scrollTop();
+
+    /* Module Slide In */
     allModules.each(function(i, el) {
       var el = $(el);
       if (el.visible(true)) {
         el.addClass("come-in"); 
       } 
     });
-    
+
+    /* Shrink Nav Bar */
+    // if(scrollPosition > 0){
+    //   navLi.addClass('small');
+    // }else{
+    //   navLi.removeClass('small');
+    // }
   });
 
+
 /*
+  
+  http://codepen.io/benkadev/pen/Ggrxd?editors=010
+  - For cool hover read more animation
+
 	http://www.ixistore.be/
 	- implement their color change 
 

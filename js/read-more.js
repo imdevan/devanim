@@ -5,7 +5,18 @@
 var ReadMore = {
 		ge: {
 	    	title: 'GE',
-	    	description: 'I am a description about GE'
+	    	description: '<h3>GE Oil & Gas</h3> \
+<p> \
+	GE Oil & gas solves the industry\'s toughest challenges, pushing the boundaries of technology to bring energy to the world. \
+</p> \
+<h3>As An ITLP Intern</h3> \
+<p> \
+	I collaborated on very large scale tasks across several business mannaging Highly Privilaged Accounts (HPA). HPAs are accounts that are critical to the success of the business. I automated remediation tracking of approximately twenty-four thousand accounts, and improved account holder communication by estabilishing an online web portal containing key information to account holders. \
+</p> \
+<h3>What I Learned</h3> \
+<p> \
+	\
+</p> '
 	  	},
 		cgi: {
 	    	title: 'CGI',
