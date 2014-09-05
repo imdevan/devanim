@@ -149,6 +149,14 @@ fieldset {
 }
 
 
+.center{
+  display: block;
+  clear: both;
+  text-align: center;
+}
+
+.cadetblue{ color: cadetblue;}
+
 /* Home
 ========================================================================== */
 #home{
@@ -174,21 +182,20 @@ fieldset {
 }
 
 /* image of me */
-.home-img{
+#home-img{
 
     /* Background */
     background: #1abc9c; /*turquoise*/
-    background: url('../img/with_the_mayor.jpg')  no-repeat center 40%;
-   /* -webkit-background-size: cover;
+    background: url('../img/DevanHuapaya.jpg')  no-repeat 20% center ;
+    -webkit-background-size: cover;
     -moz-background-size: cover;
-    -o-background-size: cover;*/
+    -o-background-size: cover;
+    background-size: cover;
     padding: 3%;
-    background-size: 160%;
 
     /* Border */
     border-radius: 50%;
     border: 0.5em solid cadetblue;
-    /*border: 1em solid white;*/
 
     /* Display */
     height: 12em;
@@ -197,11 +204,35 @@ fieldset {
     margin-top: 10%;
 }
 
+#home-img-desc{
+  position: absolute;
+  float: right;
+  display: table;
+  width: 20%;
+  font-size: 3em;
+  font-weight: 400;
+  right: 10%;
+  top: 5%;
+  color: salmon;
+  /* Hover Opacity */
+  display: none;
+}
+
+#vision-statement{
+  font-size: 1.5em;
+  margin: 5% 10% 5% 10%;
+}
 .img_wrapper img{
     position: absolute;
     top: 0;
     width: 100%;
     opacity: 0;
+
+    -webkit-transition: opacity 150ms;
+    -moz-transition: opacity 150ms;
+    -ms-transition: opacity 150ms;
+    transition: opacity 150ms;
+
     -webkit-transition: opacity 150ms;
     -moz-transition: opacity 150ms;
     -ms-transition: opacity 150ms;
@@ -450,16 +481,16 @@ fieldset {
     background-position: right top;
 }
 #rubiks-cube-solver-img{
-    background-image: url('../img/cube-solver.png');
-    background-position: left;
+    background-image: url('../img/rubikssolver.jpg');
+    background-position: center;
 }
 #ray-tracer-img{
     background-image: url('../img/raytracer.jpg');
 }
-#acronym-bot-img{
-    background-image: url('../img/acronymbot.png');
-    background-size:  100%;
-    background-position: right top;
+#sign-2-line-img{
+    background-image: url('../img/aslt.png');
+    /*background-size:  cover;  */
+    background-position: left;
 }
 #internets-img{
     background-image: url('../img/cat.jpg');
@@ -513,7 +544,9 @@ fieldset {
     /* Background */
     background-color: rgba(155, 89, 182, 0.5);
     background-image: url('../img/on-roof.jpg');
-    background-attachment: fixed;
+    /*-webkit-transform: translateZ(0);
+    transform: translateZ(0);*/ 
+    /*background-attachment: fixed;*/
     background-position: center;
     background-size: cover;
 
@@ -640,6 +673,7 @@ a.obvious-link:visited {
     -moz-transition: color .2s ease-in-out;
     -o-transition: color .2s ease-in-out;
     transition: color .2s ease-in-out;
+
     -webkit-transition: text-shadow .2s ease-in-out;
     -moz-transition: text-shadow .2s ease-in-out;
     -o-transition: text-shadow .2s ease-in-out;
@@ -682,7 +716,7 @@ a.obvious-link:visited:hover{
   color: #333;
   
   /* Shadow */
-  box-shadow: 0px 0px 300em 0px rgba(0,0,0,0.5),
+  box-shadow: 0px 0px 300em 300em rgba(0,0,0,0.5),
               0px 0px 3em 0px rgba(0,0,0,0.6);
 
   /* Zoom and Fade in Transition */
@@ -705,7 +739,17 @@ a.obvious-link:visited:hover{
 
 .read-more-content a.obvious-link{
     color: cadetblue;
+    /* Transistion */
+    -webkit-transition: color .2s ease-in-out;
+    -moz-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
 }
+.read-more-content a.obvious-link:hover{
+    color: #9FDEE0 ;/* Belize Hole */
+    text-shadow:none;
+}
+
 .read-more-exit-button{
   /* Layout */
   margin:1%;
@@ -787,10 +831,15 @@ a.obvious-link:visited:hover{
      selector is being overridden by a class
      selector, because I would love to know!
    */
+   .jobs, .projects{
+   }
   #home-link{display: none !important ;}
   #home-link2{display:block;}
   .section-title{padding-top: 10%;}
-  .col4 > div{ width: 90%;}
+  .col4 > div{ 
+      margin-left:10%;  
+      width: 80%;
+      box-shadow:   0px 2px 2px rgba(0,0,0,0.3);}
   .about-me-img-wrapper{margin:0;}
   .about-me-img{width: 90%; margin-left: 5%; margin-right: 5%;}
   .about-me-img:first-child{margin-left: 5%;}
@@ -804,22 +853,33 @@ a.obvious-link:visited:hover{
     -ms-transform: translateY(0);
     transform: translateY(0);
     }
+   /* .about-me-img-wrapper{
+      width: 100%;
+      text-align: center;
+    }*/
+    .about-me-img:first-child{
+      width: 50%;
+      margin:  auto 25%;
+      border-radius: 50%;
+      border: 0.5em solid cadetblue;
+    }
     .about-me-img:not(:first-child){
         display: none;
+    }
+    #home-img-desc{
+      display: none !important;
     }
 
   }
 }
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 800px) {
+  .col4 > div{ 
+      margin-left:5%;  
+      width: 90%;
+      box-shadow:   0px 2px 2px rgba(0,0,0,0.3);
+    }
 }
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-
 
 
 

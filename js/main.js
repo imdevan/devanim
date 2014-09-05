@@ -34,6 +34,8 @@ var rmButton = $('.read-more-button'),
     rmDescription = $('.read-more-description p'),
     rmBackground = $('.read-more-bg'),
     rmContent = $('.read-more-content'),
+    homeImg = $('#home-img'),
+    homeImgDesc = $('#home-img-desc'),
     scrollPosition;
 
 /* Module Slide In Variables */
@@ -42,6 +44,14 @@ var allModules = $(".module");
 
 var navLi = $('#nav li');
 
+/* Home Image Hover Effect
+========================================================================== */
+homeImg.hover(function(){
+    homeImgDesc.fadeIn();
+  },function(){
+    homeImgDesc.fadeOut();
+  }
+);
 /* Read More 
 ========================================================================== */
 document.write("<scr" + "ipt type='text/javascript' src='js/read-more.js'><" + "/scr" + "ipt>");

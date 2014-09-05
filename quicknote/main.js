@@ -49,4 +49,18 @@ $( document ).ready(function() {
           
         }
     } setInterval(updateGradient,10);
+
+    // Ajax Email Post
+     $('textarea').on('keydown', function(event) {
+          if (event.keyCode == 13){ //if enter is pressed
+              if (event.shiftKey) {
+                event.preventDefault();
+
+                $('#quicknote').submit();
+                alert('Note Sent to huapayadevan@gmail.com!');
+
+                
+              }
+            }
+      });
 });
