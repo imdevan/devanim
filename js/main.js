@@ -1,60 +1,41 @@
-"use strict";
-(function($) {
-	/* Slide in from bottom */
-	/* @author Sam Sehnert */
-	/* http://codepen.io/chriscoyier/pen/DjmJe */
-
-  /* Slide up when visible function
-  ========================================================================== */
-  $.fn.visible = function(partial) {
-    
-      var $t            = $(this),
-          $w            = $(window),
-          viewTop       = $w.scrollTop(),
-          viewBottom    = viewTop + $w.height(),
-          _top          = $t.offset().top,
-          _bottom       = _top + $t.height(),
-          compareTop    = partial === true ? _bottom : _top,
-          compareBottom = partial === true ? _top : _bottom;
-    
-    return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-
-  };
-
-})(jQuery);
-
-
 /* Variables
 ========================================================================== */
 
 /* Read More Variables */
-var rmButton = $('.read-more-button'),
+var rmButton = $('.project'),
     rmExitButton = $('.read-more-exit-button'),
     rmTitle = $('.read-more-title'),
     rmDescription = $('.read-more-description p'),
     rmBackground = $('.read-more-bg'),
     rmContent = $('.read-more-content'),
     homeImg = $('#home-img'),
-    homeImgDesc = $('#home-img-desc'),
+    homeImgDesc = $('.home-img-desc'),
+    win = $(window),
     scrollPosition;
 
-/* Module Slide In Variables */
-var win = $(window);
-var allModules = $(".module");
+/* Scroll Effects
+========================================================================== */
 
-var navLi = $('#nav li');
+$('a[href^="#"]').click(function(event) {
+    var id = $(this).attr("href");
+    var target = $(id).offset().top;
+    $('html, body').animate({scrollTop:target}, 500);
+    event.preventDefault();
+  });
 
 /* Home Image Hover Effect
 ========================================================================== */
 homeImg.hover(function(){
-    homeImgDesc.fadeIn();
+    homeImgDesc.addClass('display-true');
   },function(){
-    homeImgDesc.fadeOut();
+    homeImgDesc.removeClass('display-true');
   }
 );
+
 /* Read More 
 ========================================================================== */
 document.write("<scr" + "ipt type='text/javascript' src='js/read-more.js'><" + "/scr" + "ipt>");
+
 
 /* Read More Show */
 rmButton.on('click', function(){
@@ -91,43 +72,21 @@ rmContent.on('click', function(event){
   event.stopPropagation();
 });
 
-/* Module Slide In
-========================================================================== */
 
-/* Module Slide In Assignment */
-allModules.each(function(i, el) {
-  var el = $(el);
-  if (el.visible(true)) {
-    el.addClass("already-visible"); 
-  } 
+// var offset = $('nav').offset().top;
+// $(window).scroll(function() {
+//   if($(this).scrollTop() > offset) {
+//    $('nav').addClass('isFixed');
+//   } else {
+//     $('nav').removeClass('isFixed');
+//   }
+// });
+
+
+win.scroll(function(){
+  scrollPosition = win.scrollTop();
 });
-
-
-/* Window Scroll Function
-========================================================================== */
-
-  win.scroll(function(event) {
-    scrollPosition = $(this).scrollTop();
-
-    /* Module Slide In */
-    allModules.each(function(i, el) {
-      var el = $(el);
-      if (el.visible(true)) {
-        el.addClass("come-in"); 
-      } 
-    });
-
-    /* Shrink Nav Bar */
-    // if(scrollPosition > 0){
-    //   navLi.addClass('small');
-    // }else{
-    //   navLi.removeClass('small');
-    // }
-  });
-
-
-/*
-  
+/*  
   http://codepen.io/benkadev/pen/Ggrxd?editors=010
   - For cool hover read more animation
 

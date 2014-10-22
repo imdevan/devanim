@@ -14,11 +14,13 @@ html,
 button,
 input,
 select,
-textarea {
+textarea,
+body {
 
     /* Color */
-    background: rgb(245,245,245); /*whitesmoke*/
-    color: #222;
+    /*background: rgb(245,245,245); /*whitesmoke*/
+    background: #f0efe7;
+    color:#5b4636;
 
     /* Overflow */
     overflow-x:hidden;
@@ -204,7 +206,7 @@ fieldset {
     margin-top: 10%;
 }
 
-#home-img-desc{
+.home-img-desc{
   position: absolute;
   float: right;
   display: table;
@@ -215,9 +217,17 @@ fieldset {
   top: 5%;
   color: salmon;
   /* Hover Opacity */
-  display: none;
+  opacity: 0;
+
+    -webkit-transition: opacity  200ms ease-in-out;
+    -moz-transition: opacity 200ms ease-in-out;
+    -ms-transition: opacity 200ms ease-in-out;
+    transition: opacity 200ms ease-in-out;
 }
 
+.display-true{
+  opacity: 1;
+}
 #vision-statement{
   font-size: 1.5em;
   margin: 5% 10% 5% 10%;
@@ -263,6 +273,7 @@ fieldset {
     /* Color */
     color: cadetblue;
     background: rgba(245,245,245,0.99);
+    background: #f0efe7;
 }
 
 #home-link {
@@ -310,8 +321,9 @@ fieldset {
     color: #5f9ea0; /* cadet blue */
 }
 #nav li:hover {
-    /* Color */
-    /*background-color: rgba(0,0,0,0.6);*/
+
+    /* Text Decoration */
+    text-decoration: underline;
 }
 
 #nav a {
@@ -323,29 +335,6 @@ fieldset {
 
   /* Transition */
   -webkit-transition: .2s ease;
-}
-#nav a:hover {
-  color: hotPink;
-}
-
-@media (-webkit-min-device-pixel-ratio:0) {
-*{margin-right:0;}
-  #nav a {
-    background-color: cadetblue;
-    background-image: -webkit-linear-gradient(left, hotPink 0%, coral 50%, transparent 50%);
-    background-position: 100% 0;
-    background-size: 200% 200%;
-    color: transparent;
-    -webkit-transition: .1s .2s;
-    -webkit-background-clip: text;
-  }
-  #nav a:hover {
-    background-position: 0 0;
-    color: transparent;
-    transition: .4s 0;  
-
-  }
-
 }
 .row{
     width: 100%;
@@ -362,39 +351,79 @@ fieldset {
     width: 100%;
     /*min-height: 5em;*/
     height: 100%;
+    min-height: 28em;
 
     /* color */
-    background: coral;
-    background: -webkit-linear-gradient(mediumseagreen, transparent), -webkit-linear-gradient(-45deg, cadetblue, turquoise), -webkit-linear-gradient(45deg, cyan, transparent);
-    background: -moz-linear-gradient(mediumseagreen, transparent), -moz-linear-gradient(-45deg, cadetblue, turquoise), -moz-linear-gradient(45deg, cyan, transparent);
-    background: -o-linear-gradient(mediumseagreen, transparent), -o-linear-gradient(-45deg, cadetblue, turquoise), -o-linear-gradient(45deg, cyan, transparent);
-    background: linear-gradient(mediumseagreen, transparent), linear-gradient(-45deg, cadetblue, turquoise), linear-gradient(45deg, cyan, transparent);
-    background-blend-mode: multiply;
     position: relative;
     text-align: center;
+    color:#5b4636;
+    text-rendering:optimizeLegibility;
 
 
     /* Cursor */
-    /*cursor:pointer;*/
-
-    /* Box Shadow */
-    -webkit-box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3); 
-
+    cursor:pointer;
 
     /* Transistion */
     -webkit-transition: background-color .2s ease-in-out;
     -moz-transition: background-color .2s ease-in-out;
     -o-transition: background-color .2s ease-in-out;
     transition: background-color .2s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.job:hover, .project:hover{
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+    /* Box Shadow */
+    -webkit-box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3); 
 }
 
+.project:hover  .jobs-img, .project:hover  .project-img{
+  border-radius: 0;
+  visibility: none;
+}
+
+.jobs-text, .projects-text{
+}
+
+.jobs-co-name, .project-title{
+
+    /* Layout */
+    padding-bottom: 2%;
+    text-align: center;
+    padding: 8% 0%;
+    display: block;
+    z-index: 3;
+
+    /* Text */
+    color: cadetblue;
+}
+.jobs-text, .project-text{
+    /* Font */
+    font-size: 0.8em;
+    text-align:left;
+    line-height: 1.75em;
+    padding: 3%;
+    display:default;
+}
+.side-note{
+    /* Color */
+    color: rgba(0,0,0,0.7);
+}
+
+.job, .project
 .job ul, .project ul{
     list-style: none;
     margin:0;
     padding:0;
 }
-.job:hover, .project:hover{
-    /*background-color: cadetblue;*/
+.job a.obvious-link, .project a.obvious-link{
+  position: absolute;
+  bottom: 2%;
+  color: inherit;
 }
 .jobs-img, .project-img, .about-me-img{
     /* display */
@@ -407,35 +436,13 @@ fieldset {
     background-size: fill;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.jobs-co-name, .project-title{
-
-    /* Layout */
-    display: block;
-    padding-top: 8%;
-    padding-bottom: 2%;
-    z-index: 3;
-
-    /* Color */
-    /*background: coral;*/
-    color: #F5F5F5;
-
-    /* Align Text */
-    text-align: center;
+    border-radius: 50%;
 
 
-}
-.jobs-text, .project-text{
-    /* Font */
-    font-size: 0.8em;
-    font-weight: 400;
-    text-align:left;
-    padding: 3%;
-    display:default;
-}
-.side-note{
-    /* Color */
-    color: rgba(245,245,245,0.7);
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition:  all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 #ge-img{
     background-image: url('../img/ge.jpg');
@@ -542,7 +549,7 @@ fieldset {
     z-index: 2;
 
     /* Background */
-    background-color: rgba(155, 89, 182, 0.5);
+    background-color: #9C5A44;
     background-image: url('../img/on-roof.jpg');
     /*-webkit-transform: translateZ(0);
     transform: translateZ(0);*/ 
@@ -574,7 +581,8 @@ fieldset {
 footer{
     padding: 3%;
     text-align: center;
-    background-color: #EAEAEA;
+    background-color: #999;
+    color: #f5f5f5;
 }
 /* Column Layout
 ========================================================================== */
@@ -608,43 +616,6 @@ footer{
 /* Slide in animation
 ========================================================================== */
 
-.come-in {
-    -webkit-transform: translateY(150px);
-    -moz-transform: translateY(150px);
-    -o-transform: translateY(150px);
-    -ms-transform: translateY(150px);
-    transform: translateY(150px);
-    -webkit-animation: come-in 1s ease forwards;
-    animation: come-in 1s ease forwards;
-}
-
-.come-in:nth-child(odd) {
-  -webkit-animation-duration: 0.6s;
-  animation-duration: 0.6s;
-}
-.already-visible {
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    -o-transform: translateY(0px);
-    transform: translateY(0px);
-    -webkit-animation:none;
-    animation: none;
-}
-
-@-webkit-keyframes come-in {
-  to {  -webkit-transform: translateY(0px);
-        -moz-transform: translateY(0px);
-        -o-transform: translateY(0px);
-        transform: translateY(0px);
-    }
-}
-@keyframes come-in {
-  to {  -webkit-transform: translateY(0px); `
-        -moz-transform: translateY(0px);
-        -o-transform: translateY(0px);
-        transform: translateY(0px);
-    }
-}
 
 .read-less{
    position: absolute;
@@ -664,7 +635,9 @@ a.obvious-link:visited {
 
     /* Visibility - set to hidden, until implemented */
     /*visibility: hidden;*/
-
+    display: block;
+    width: 100%;
+    text-align: center;
     /* Cursor */
     cursor: pointer;
 
@@ -679,10 +652,10 @@ a.obvious-link:visited {
     -o-transition: text-shadow .2s ease-in-out;
     transition: text-shadow .2s ease-in-out;
 }
-a.obvious-link:hover,
+.project:hover a.obvious-link,
 a.obvious-link:visited:hover{
-    color: white;
-    text-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+    /*color: white;*/
+    /*text-shadow: 0.1em 0em 0.1em rgba(1,1,1,0.9);*/
 }
 /* Pop Up
 ========================================================================== */
@@ -713,7 +686,7 @@ a.obvious-link:visited:hover{
 
   /*Color */
   background-color: #f2f2f2;
-  color: #333;
+
   
   /* Shadow */
   box-shadow: 0px 0px 300em 300em rgba(0,0,0,0.5),
@@ -768,7 +741,7 @@ a.obvious-link:visited:hover{
   cursor: pointer;
   
   /* Background */
-  background: cadetblue;
+  background: #d34836;
   border-radius: 50%;
   box-shadow: 0 0 .5em rgba(0,0,0,0.5);
   -webkit-transition: box-shadow 0.1s ease-in-out;
@@ -784,12 +757,12 @@ a.obvious-link:visited:hover{
   /* Layout */
   text-align: center;
   display: inline-block;
-  line-height: 4.5em;
+  line-height: 2.5em;
   position: relative;
   width: 100%;
   
   /* Font */
-  font-size: 2em;
+  font-size: 3em;
   
   /* Color */
   color: #f2f2f2;
@@ -798,11 +771,25 @@ a.obvious-link:visited:hover{
   background-image: -moz-linear-gradient( right,turquoise, mediumseagreen);
   background-image: -o-linear-gradient( right,turquoise, mediumseagreen);
   background-image: linear-gradient( right,turquoise, mediumseagreen);
+  background: cadetblue;
+   background: #f0efe7;
+
+    color:#5b4636;
+}
+.read-more-title span{
+
+  background-image: -webkit-linear-gradient( right,turquoise, mediumseagreen);
+  background-image: -moz-linear-gradient( right,turquoise, mediumseagreen);
+  background-image: -o-linear-gradient( right,turquoise, mediumseagreen);
+  background-image: linear-gradient( right,turquoise, mediumseagreen);
+
+    color: transparent;
+    -webkit-transition: .1s .2s;
+    -webkit-background-clip: text;
 }
 
 .read-more-description p {
   margin: 3% 5%;
-  color: #333;
 }
 
 
@@ -825,27 +812,30 @@ a.obvious-link:visited:hover{
 }
 
 @media only screen and (max-width: 1405px) {
+
+  .jobs-img, .project-img, .about-me-img{
+    border-radius: 0;
+  }
   /* I know I shouldn't use !important,
      but it was being overridden by the #nav a
      selector, feel free to tell me why the id
      selector is being overridden by a class
      selector, because I would love to know!
-   */
-   .jobs, .projects{
-   }
+   */=
   #home-link{display: none !important ;}
   #home-link2{display:block;}
   .section-title{padding-top: 10%;}
   .col4 > div{ 
       margin-left:10%;  
       width: 80%;
-      box-shadow:   0px 2px 2px rgba(0,0,0,0.3);}
+    }
   .about-me-img-wrapper{margin:0;}
   .about-me-img{width: 90%; margin-left: 5%; margin-right: 5%;}
   .about-me-img:first-child{margin-left: 5%;}
   /*.job:hover,.project:hover{background-color: coral;}*/
   #nav {font-size: 0.7em;}
   .atgmail{font-size:0.4em;}
+  
   .come-in {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
