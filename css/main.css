@@ -291,10 +291,20 @@ fieldset {
     background: #f0efe7;
 
 
-  -webkit-transition: box-shadow 0.15s ease-in-out;
-  -moz-transition: box-shadow 0.15s ease-in-out;
-  -o-transition: box-shadow 0.15s ease-in-out;
-  transition: box-shadow 0.15s ease-in-out;
+  -webkit-transition: top  0.5s ease-in-out;
+  -moz-transition: top  0.5s ease-in-out;
+  -o-transition: top  0.5s ease-in-out;
+  transition: top  0.5s ease-in-out;
+
+  -webkit-transition: opacity  0.5s ease-in-out;
+  -moz-transition: opacity  0.5s ease-in-out;
+  -o-transition: opacity  0.5s ease-in-out;
+  transition: opacity  0.5s ease-in-out;
+
+  -webkit-transition: all  0.5s ease-in-out;
+  -moz-transition: all  0.5s ease-in-out;
+  -o-transition: all  0.5s ease-in-out;
+  transition: all  0.5s ease-in-out;
 }
 .hasBoxShadow{
 
@@ -466,7 +476,8 @@ fieldset {
     background-position: top left;
 }
 .border-shadow{
-  -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black;
+  border-bottom: 1px solid cadetblue;
+  /*-moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black;*/
 }
 
 
@@ -526,12 +537,16 @@ fieldset {
     margin:10%;
     width: 50%;
 }
-.email, .email:visited, #contact-info a:visited,  #contact-info a{
+.email, .email:visited, .social a:visited,  .social a{
     text-decoration: none;
     color: cadetblue;
     text-decoration: none;
+    font-size: 1.5em; 
 }
-
+.atgmail a, .atgmail a:visited{
+    text-decoration: none;
+    color: cadetblue;
+}
 .social{
   font-family: "Genericons";
   font-size: 1.75em;
@@ -614,31 +629,18 @@ a.obvious-link:visited:hover{
 /* Pop Up
 ========================================================================== */
 
-.read-more-bg{
-  /* Layout */
-  position:absolute;
-  height:100%;
-  width:100%;
-  margin:0 auto;
-  z-index: 7;   
-  top: 0;
-  
-  /* Background */
-  /*background: rgba(0,0,0,0.5);*/
-  
-  /* Display */
-  display:table;
-}
 
 .read-more-content{
   
-  /* Layout */
-  /*margin:2.5% 10% 2.5% 10%;*/
+  /* Layout */\
   height: 100%; width: 100%;
-  display: table;
-  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: none;
+  position: fixed;
   overflow: scroll;
-
+  z-index: 7;  
+  margin: 0;
   /*Color */
   background-color: #f2f2f2;
 

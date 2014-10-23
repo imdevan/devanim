@@ -30,20 +30,24 @@ document.write("<scr" + "ipt type='text/javascript' src='js/read-more.js'><" + "
 
 /* Read More Show */
 rmButton.on('click', function(){
+  // Get read-more content
   var _id = $(this).attr('id').replace('read-more-', '');
   var _this = ReadMore[_id];
 
+  // Add read-more content to dom
   rmTitle.html(_this.title);
   rmDescription.html(_this.description);
-  // rmBackground.fadeIn('0.1s');
-  rmBackground.fadeIn('0.1s').css('top',scrollPosition);
+
+  // Show read-more content
+  rmContent.fadeIn('0.1s');
   rmContent.addClass('p-zoom-in');
 });
 
 /* Read More Exit */
 rmExitButton.on('click', function(){
+    // Hide read-more content
     rmContent.removeClass('p-zoom-in');
-    rmBackground.fadeOut('0.1s');
+    rmContent.fadeOut('0.1s');
 });
 
 /* Read More Exit When document clicked outside container*/
@@ -64,28 +68,22 @@ rmContent.on('click', function(event){
 });
 
 
-// var offset = $('nav').offset().top;
-// $(window).scroll(function() {
-//   if($(this).scrollTop() > offset) {
-//    $('nav').addClass('isFixed');
-//   } else {
-//     $('nav').removeClass('isFixed');
-//   }
-// });
-
-
 /* Menu Hide Function 
 ========================================================================== */
 var navIsDown = true,
     lastScrollTop = 0,
-    nav = $('#nav');
+    nav = $('#nav'),
+    navHeight = nav.outerHeight();
+
 function hideNav(){
-    nav.fadeOut ();
+    // nav.fadeOut ();
     navIsDown = false;
+    nav.css('height', '0px').css('opacity', '0');
 };
 function showNav(){
-    nav.fadeIn();
+    // nav.fadeIn();
     navIsDown = true;
+    nav.css('height', navHeight).css('opacity', '1');
 };
 function hideNavOnScrollDown(){
   if(navIsDown && scrollPosition > lastScrollTop){
@@ -125,8 +123,9 @@ $('a[href^="#"]').click(function(event) {
     var target = $(id).offset().top;
     $('html, body').animate({scrollTop:target}, 500, function(){
 
-      if(id != "body")
-      hideNav();
+      if(id != "#body"){
+        hideNav();
+      }
 
       // update last scroll position
       lastScrollTop = scrollPosition;
