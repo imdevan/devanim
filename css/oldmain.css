@@ -9,8 +9,6 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-@import url('fonts/genericons/genericons.css');
-
 
 html,
 button,
@@ -93,10 +91,8 @@ fieldset {
    ========================================================================== */
 
 
-/* Content Styles
+/* General Styles
 ========================================================================== */
-
-
 .section-content {
 
     /* Layout */
@@ -113,9 +109,6 @@ fieldset {
 /* Body Content */
 .section-title{
 
-    /*Layout*/
-    text-align: center;
-
     /* Font */
     font-size: 3em;
     font-weight: 300;
@@ -126,7 +119,7 @@ fieldset {
     /* Padding */
     padding-top:5%;
 
-    /* Clearfix */ 
+    /* Clearfix */
     clear: both;
 
     /* Transistion */
@@ -135,7 +128,6 @@ fieldset {
     -o-transition: color 2s ease-out;
     transition: color 2s ease-out;
 }
-
 .p-title{
     /* display */
     display: block;
@@ -169,28 +161,15 @@ fieldset {
 
 /* Home
 ========================================================================== */
-.main-header{
-  /*Font*/
-  font-family: 'Lato';
-  font-weight: 300;
-  font-size: 3em;
-  color: cadetblue;
-
-  /*Layout*/
-  left: 2%;
-  top: 0;
-  position: absolute;
-  z-index: 20;
-}
-#my-home{
+#home{
 
     /* Color */
     color: #5f9ea0; /* cadet blue */
 
     /* Layout */
     padding-top: 0;
-    top: 6em;
     position: relative;
+    height: 100vh;
 
     /* Text */
     text-align: center;
@@ -224,6 +203,7 @@ fieldset {
     height: 12em;
     width: 12em;
     margin:auto;
+    margin-top: 10%;
 }
 
 .home-img-desc{
@@ -268,7 +248,12 @@ fieldset {
     -ms-transition: opacity 150ms;
     transition: opacity 150ms;
 }
-   
+    .img_wrapper.loaded img{
+        opacity: 1;
+    }
+.red{
+    color: crimson;
+}
 
 /* Nav Menu
 ========================================================================== */
@@ -289,15 +274,19 @@ fieldset {
     color: cadetblue;
     background: rgba(245,245,245,0.99);
     background: #f0efe7;
-
-
-  -webkit-transition: box-shadow 0.15s ease-in-out;
-  -moz-transition: box-shadow 0.15s ease-in-out;
-  -o-transition: box-shadow 0.15s ease-in-out;
-  transition: box-shadow 0.15s ease-in-out;
 }
-.hasBoxShadow{
 
+#home-link {
+    /* Layout */
+    float: left;
+    padding: 0% 10% 0% 3%;
+
+    /* Font */
+    font-size:2.3em;
+}
+
+#nav li:last-child{
+    float: left;
 }
 #nav li {
 
@@ -317,6 +306,10 @@ fieldset {
     -ms-transition: background 200ms ease-in-out;
     transition: background 200ms ease-in-out;
 }
+.small{
+  line-height: 1em;
+}
+
 #nav a {
     /* Layout */
     display: block;
@@ -352,12 +345,13 @@ fieldset {
 }
 /* Jobs
 ========================================================================== */
-.project{
+.job, .project{
     /* layout */
     margin:3% 0 0 0;
     width: 100%;
     /*min-height: 5em;*/
     height: 100%;
+    min-height: 28em;
 
     /* color */
     position: relative;
@@ -379,7 +373,7 @@ fieldset {
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 }
-.project:hover{
+.job:hover, .project:hover{
 
     background-color: rgba(255, 255, 255, 0.5);
 
@@ -387,13 +381,15 @@ fieldset {
     -webkit-box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3); 
 }
 
-.project:hover  .project-img{
+.project:hover  .jobs-img, .project:hover  .project-img{
   border-radius: 0;
   visibility: none;
 }
 
+.jobs-text, .projects-text{
+}
 
-.project-title{
+.jobs-co-name, .project-title{
 
     /* Layout */
     padding-bottom: 2%;
@@ -405,7 +401,7 @@ fieldset {
     /* Text */
     color: cadetblue;
 }
-.project-text{
+.jobs-text, .project-text{
     /* Font */
     font-size: 0.8em;
     text-align:left;
@@ -424,12 +420,12 @@ fieldset {
     margin:0;
     padding:0;
 }
-. project a.obvious-link{
+.job a.obvious-link, .project a.obvious-link{
   position: absolute;
   bottom: 2%;
   color: inherit;
 }
-.project-img{
+.jobs-img, .project-img, .about-me-img{
     /* display */
     display: block;
     height: 12.5em;
@@ -466,7 +462,7 @@ fieldset {
     background-position: top left;
 }
 .border-shadow{
-  -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black;
+       -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black;
 }
 
 
@@ -506,6 +502,41 @@ fieldset {
 #internets-img{
     background-image: url('../img/cat.jpg');
 }
+/* About Me
+========================================================================== */
+#about-me-img-wrapper{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3%;
+}
+/* About Me Images Formatted above w/ .jobs-img */
+.about-me-img{
+    /* Layout */
+    margin-right: 1%;
+    width: 20%;
+    float: left;
+}
+.about-me-img:first-child{
+    margin-left: 7%;
+}
+#rock-climbing-img{
+    background-image: url('../img/rock-climbing.jpg');
+    /*background-size: 80%;*/
+    background-position: top;
+}
+#holding-cat-img{
+    background-image: url('../img/holding-a-cat.jpg');
+    background-position: 50% 10%;
+}
+#me-img{
+    background-image: url('../img/me.jpg');
+}
+#me-in-a-nutshell-img{
+    background-image: url('../img/me-in-a-nutshell.jpg');
+    background-size:  300%;
+    background-position: 70% 17.5%;
+}
+
 
 /* Contact
 ========================================================================== */
@@ -517,6 +548,19 @@ fieldset {
     left:0;
     z-index: 2;
 
+    /* Background */
+    background-color: #9C5A44;
+    background-image: url('../img/on-roof.jpg');
+    /*-webkit-transform: translateZ(0);
+    transform: translateZ(0);*/ 
+    /*background-attachment: fixed;*/
+    background-position: center;
+    background-size: cover;
+
+    @media (max-width: @iphone-screen) {
+        background-attachment: scroll;
+    }
+
     /* Font */
     color: #F5F5F5;
     font-size: 1.5em;
@@ -524,20 +568,22 @@ fieldset {
 }
 #contact-info{
     margin:10%;
-    width: 50%;
 }
-.email, .email:visited, #contact-info a:visited,  #contact-info a{
+#contact-info > .side-note{
+    font-size: 0.75em;
+}
+.email a, a:visited{
     text-decoration: none;
-    color: cadetblue;
-    text-decoration: none;
+    color: #F5F5F5;
 }
-
-.social{
-  font-family: "Genericons";
-  font-size: 1.75em;
-  color: rgba(245, 245,245, 1);
+/* Footer
+========================================================================== */
+footer{
+    padding: 3%;
+    text-align: center;
+    background-color: #999;
+    color: #f5f5f5;
 }
-
 /* Column Layout
 ========================================================================== */
 .col1{
@@ -627,17 +673,16 @@ a.obvious-link:visited:hover{
   /*background: rgba(0,0,0,0.5);*/
   
   /* Display */
-  display:table;
+  display:none;
 }
 
 .read-more-content{
   
   /* Layout */
-  /*margin:2.5% 10% 2.5% 10%;*/
-  height: 100%; width: 100%;
+  margin:2.5% 10% 2.5% 10%;
+  height: 90%; width: 80%;
   display: table;
-  position: absolute;
-  overflow: scroll;
+  position: static;
 
   /*Color */
   background-color: #f2f2f2;
@@ -757,6 +802,7 @@ a.obvious-link:visited:hover{
     -o-transform: scale(1); 
     transform: scale(1); 
 }
+
 /* ==========================================================================
    Media Queries for Responsive Design.
    ========================================================================== */
@@ -767,7 +813,7 @@ a.obvious-link:visited:hover{
 
 @media only screen and (max-width: 1405px) {
 
-  ..project-img{
+  .jobs-img, .project-img, .about-me-img{
     border-radius: 0;
   }
   /* I know I shouldn't use !important,
@@ -783,7 +829,10 @@ a.obvious-link:visited:hover{
       margin-left:10%;  
       width: 80%;
     }
-
+  .about-me-img-wrapper{margin:0;}
+  .about-me-img{width: 90%; margin-left: 5%; margin-right: 5%;}
+  .about-me-img:first-child{margin-left: 5%;}
+  /*.job:hover,.project:hover{background-color: coral;}*/
   #nav {font-size: 0.7em;}
   .atgmail{font-size:0.4em;}
   
@@ -793,6 +842,19 @@ a.obvious-link:visited:hover{
     -o-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
+    }
+   /* .about-me-img-wrapper{
+      width: 100%;
+      text-align: center;
+    }*/
+    .about-me-img:first-child{
+      width: 50%;
+      margin:  auto 25%;
+      border-radius: 50%;
+      border: 0.5em solid cadetblue;
+    }
+    .about-me-img:not(:first-child){
+        display: none;
     }
     #home-img-desc{
       display: none !important;

@@ -13,15 +13,6 @@ var rmButton = $('.project'),
     win = $(window),
     scrollPosition;
 
-/* Scroll Effects
-========================================================================== */
-
-$('a[href^="#"]').click(function(event) {
-    var id = $(this).attr("href");
-    var target = $(id).offset().top;
-    $('html, body').animate({scrollTop:target}, 500);
-    event.preventDefault();
-  });
 
 /* Home Image Hover Effect
 ========================================================================== */
@@ -83,26 +74,62 @@ rmContent.on('click', function(event){
 // });
 
 
+/* Menu Hide Function 
+========================================================================== */
+var navIsDown = true,
+    lastScrollTop = 0,
+    nav = $('#nav');
+function hideNav(){
+    nav.fadeOut ();
+    navIsDown = false;
+};
+function showNav(){
+    nav.fadeIn();
+    navIsDown = true;
+};
+function hideNavOnScrollDown(){
+  if(navIsDown && scrollPosition > lastScrollTop){
+    // hide nav bar
+    hideNav();
+  }
+  else if(!navIsDown && scrollPosition < lastScrollTop){
+    // show nav bar
+    showNav();
+  }
+
+  // update last scroll position
+  lastScrollTop = scrollPosition;
+};
+function manageNavShadow(){
+
+  if(scrollPosition == 0){
+    nav.removeClass("border-shadow");
+  }
+  else{
+    nav.addClass("border-shadow");
+  }
+};
+
 win.scroll(function(){
   scrollPosition = win.scrollTop();
+  hideNavOnScrollDown();
+  manageNavShadow();;
 });
-/*  
-  http://codepen.io/benkadev/pen/Ggrxd?editors=010
-  - For cool hover read more animation
 
-	http://www.ixistore.be/
-	- implement their color change 
+/* Menu Scroll Effects
+========================================================================== */
 
-	http://codepen.io/devanh/pen/pedLE
-	- implement page flip
+$('a[href^="#"]').click(function(event) {
+    event.preventDefault();
+    var id = $(this).attr("href");
+    var target = $(id).offset().top;
+    $('html, body').animate({scrollTop:target}, 500, function(){
 
-	http://sarasoueidan.com/blog/windows8-animations/
-	- option for 'read more'
+      if(id != "body")
+      hideNav();
 
-	http://codepen.io/devanh/pen/tJAhG
-	- for scrolling
+      // update last scroll position
+      lastScrollTop = scrollPosition;
 
-    border-top: 600px solid #d9d8c6;
-       border-left: 600px solid transparent; 
-       border-right: 600px solid transparent; 
-*/
+    });
+  });
