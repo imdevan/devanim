@@ -6,12 +6,13 @@ var rmButton = $('.project'),
     rmExitButton = $('.read-more-exit-button'),
     rmTitle = $('.read-more-title'),
     rmDescription = $('.read-more-description p'),
-    rmBackground = $('.read-more-bg'),
     rmContent = $('.read-more-content'),
     homeImg = $('#home-img'),
     homeImgDesc = $('.home-img-desc'),
+    mainC = $('#main-container'),
     win = $(window),
     scrollPosition;
+
 
 
 /* Home Image Hover Effect
@@ -38,33 +39,30 @@ rmButton.on('click', function(){
   rmTitle.html(_this.title);
   rmDescription.html(_this.description);
 
+  // Remove leftover css from remove
+  rmContent.removeClass('fadeOutLeft');
+  mainC.removeClass('fadeInRight');
+
   // Show read-more content
-  rmContent.fadeIn('0.1s');
-  rmContent.addClass('p-zoom-in');
+  rmContent.show();
+  rmContent.addClass('fadeInLeft');
+  mainC.addClass('fadeOutRight');
+
 });
 
 /* Read More Exit */
 rmExitButton.on('click', function(){
-    // Hide read-more content
-    rmContent.removeClass('p-zoom-in');
-    rmContent.fadeOut('0.1s');
-});
+  // Remove leftover css 
+  rmContent.removeClass('fadeInLeft');
+  mainC.removeClass('fadeOutRight');
 
-/* Read More Exit When document clicked outside container*/
-$(document).mouseup(function (e)
-{
-    // var container = $("YOUR CONTAINER SELECTOR");
 
-    if (!rmContent.is(e.target) // if the target of the click isn't the container...
-        && rmContent.has(e.target).length === 0) // ... nor a descendant of the container
-    {
-      rmContent.removeClass('p-zoom-in');
-      rmBackground.fadeOut('0.1s');
-    }
-});
+  // Show read-more content
+  rmContent.addClass('fadeOutLeft', function(){
+    rmContent.hide();
+  });
+  mainC.addClass('fadeInRight');
 
-rmContent.on('click', function(event){
-  event.stopPropagation();
 });
 
 

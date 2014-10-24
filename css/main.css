@@ -550,9 +550,10 @@ fieldset {
 .social{
   font-family: "Genericons";
   font-size: 1.75em;
-  color: rgba(245, 245,245, 1);
 }
-
+.social a:hover, .email:hover{
+  color: coral;
+}
 /* Column Layout
 ========================================================================== */
 .col1{
@@ -580,6 +581,8 @@ fieldset {
 .col4{
     clear: both;
     background: purple;
+    max-width: 60em;
+    margin: auto;
 }
 
 /* Slide in animation
@@ -628,7 +631,10 @@ a.obvious-link:visited:hover{
 }
 /* Pop Up
 ========================================================================== */
-
+  #main-container{
+    position: absolute;
+    /*overflow-y:scroll;*/
+  }
 
 .read-more-content{
   
@@ -636,34 +642,27 @@ a.obvious-link:visited:hover{
   height: 100%; width: 100%;
   top: 0;
   bottom: 0;
+
   display: none;
   position: fixed;
   overflow: scroll;
   z-index: 7;  
   margin: 0;
+
   /*Color */
   background-color: #f2f2f2;
 
   
-  /* Shadow */
-  box-shadow: 0px 0px 300em 300em rgba(0,0,0,0.5),
-              0px 0px 3em 0px rgba(0,0,0,0.6);
 
-  /* Zoom and Fade in Transition */
-  opacity: 0;
-  
+  /* Ovewrflow */
+  overflow-y: scroll; 
+
+  /*Trasitions*/
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  transform: sacle(0.8);
- 
-  /* Ovewrflow */
-  overflow-y: scroll; 
 }
 
 
@@ -767,9 +766,9 @@ a.obvious-link:visited:hover{
     #home-link2{display:none;}
 }
 
-@media only screen and (max-width: 1405px) {
+@media only screen and (max-width: 1405px)  and (min-width: 1001px){
 
-  ..project-img{
+  .project-img{
     border-radius: 0;
   }
   /* I know I shouldn't use !important,
@@ -787,7 +786,7 @@ a.obvious-link:visited:hover{
     }
 
   #nav {font-size: 0.7em;}
-  .atgmail{font-size:0.4em;}
+
   
   .come-in {
     -webkit-transform: translateY(0);
@@ -803,11 +802,17 @@ a.obvious-link:visited:hover{
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .col4 > div{ 
       margin-left:5%;  
       width: 90%;
       box-shadow:   0px 2px 2px rgba(0,0,0,0.3);
+    }
+    .main-header, .section-title{
+      font-size: 2em;
+    }
+    .main-header{
+      
     }
 }
 
