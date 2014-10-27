@@ -179,7 +179,7 @@
       float: left;
       vertical-align: middle;
       top: 0;
-      z-index: 6;
+      z-index: 3;
 
       /* Color */
       color: cadetblue;
@@ -595,6 +595,7 @@
       top:0; right: 0; left: 0; bottom: 0;
       position: absolute;    
       overflow-x:none;
+      z-index: 2;
     }
 
   .read-more-content{
@@ -607,7 +608,7 @@
     display: none;
     position: fixed;
     overflow: scroll;
-    z-index: 7;  
+    z-index: 4;  
     margin: 0;
 
     /*Color */

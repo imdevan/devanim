@@ -44,7 +44,7 @@ rmButton.on('click', function(){
   mainC.removeClass('fadeInRight');
 
   // Show read-more content
-  // rmContent.show();
+  rmContent.show();
   rmContent.addClass('fadeInLeft');
   mainC.addClass('fadeOutRight');
 
@@ -59,7 +59,7 @@ rmExitButton.on('click', function(){
 
   // Show read-more content
   rmContent.addClass('fadeOutLeft', function(){
-    // rmContent.hide();
+    rmContent.hide();
   });
   mainC.addClass('fadeInRight');
 
@@ -76,12 +76,12 @@ var navIsDown = true,
 function hideNav(){
     // nav.fadeOut ();
     navIsDown = false;
-    nav.css('height', '0px').css('opacity', '0');
+    nav.css('top', -navHeight).css('opacity', '0');
 };
 function showNav(){
     // nav.fadeIn();
     navIsDown = true;
-    nav.css('height', navHeight).css('opacity', '1');
+    nav.css('top', '0px').css('opacity', '1');
 };
 function hideNavOnScrollDown(){
   if(navIsDown && scrollPosition > lastScrollTop){
