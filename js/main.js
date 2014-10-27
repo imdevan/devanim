@@ -44,7 +44,7 @@ rmButton.on('click', function(){
   mainC.removeClass('fadeInRight');
 
   // Show read-more content
-  rmContent.show();
+  // rmContent.show();
   rmContent.addClass('fadeInLeft');
   mainC.addClass('fadeOutRight');
 
@@ -59,7 +59,7 @@ rmExitButton.on('click', function(){
 
   // Show read-more content
   rmContent.addClass('fadeOutLeft', function(){
-    rmContent.hide();
+    // rmContent.hide();
   });
   mainC.addClass('fadeInRight');
 
@@ -108,6 +108,7 @@ function manageNavShadow(){
 
 win.scroll(function(){
   scrollPosition = win.scrollTop();
+  console.log(scrollPosition);
   hideNavOnScrollDown();
   manageNavShadow();;
 });

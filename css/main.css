@@ -1,846 +1,875 @@
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+  /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+  /*
+   * What follows is the result of much research on cross-browser styling.
+   * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+   * Kroc Camen, and the H5BP dev community and team.
+   */
 
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-@import url('fonts/genericons/genericons.css');
-
-
-html,
-button,
-input,
-select,
-textarea,
-body {
-
-    /* Color */
-    /*background: rgb(245,245,245); /*whitesmoke*/
-    background: #f0efe7;
-    color:#5b4636;
-
-    /* Overflow */
-    overflow-x:hidden;
+  /* ==========================================================================
+     Base styles: opinionated defaults
+     ========================================================================== */
+  @import url('fonts/genericons/genericons.css');
 
 
-}
+  html,
+  button,
+  input,
+  select,
+  textarea,
+  body {
 
-html {
+      /* Color */
+      /*background: rgb(245,245,245); /*whitesmoke*/
+      background: #f0efe7;
+      color:#5b4636;
 
-    /* Font */
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 1.5em;
-    line-height: 1.4;
-}
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #1abc9c; /*turquoise*/
-    text-shadow: none;
-}
-
-::selection {
-    background: #1abc9c; /*turquoise*/
-    text-shadow: none;
-}
-
-/*
- * Remove the gap between images, videos, audio and canvas and the bottom of
- * their containers: h5bp.com/i/440
- */
-
-audio,
-canvas,
-img,
-video {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
+      /* Overflow */
+      overflow-x:hidden;
 
 
-/* ==========================================================================
-   Browse Happy prompt
-   ========================================================================== */
+  }
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
+  html {
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+      /* Font */
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 1.5em;
+      line-height: 1.4;
+  }
+  /*
+   * Remove text-shadow in selection highlight: h5bp.com/i
+   * These selection rule sets have to be separate.
+   * Customize the background color to match your design.
+   */
+
+  ::-moz-selection {
+      background: #1abc9c; /*turquoise*/
+      text-shadow: none;
+  }
+
+  ::selection {
+      background: #1abc9c; /*turquoise*/
+      text-shadow: none;
+  }
+
+  /*
+   * Remove the gap between images, videos, audio and canvas and the bottom of
+   * their containers: h5bp.com/i/440
+   */
+
+  audio,
+  canvas,
+  img,
+  video {
+      vertical-align: middle;
+  }
+
+  /*
+   * Remove default fieldset styles.
+   */
+
+  fieldset {
+      border: 0;
+      margin: 0;
+      padding: 0;
+  }
 
 
-/* Content Styles
-========================================================================== */
+  /* ==========================================================================
+     Browse Happy prompt
+     ========================================================================== */
+
+  .browsehappy {
+      margin: 0.2em 0;
+      background: #ccc;
+      color: #000;
+      padding: 0.2em 0;
+  }
+
+  /* ==========================================================================
+     Author's custom styles
+     ========================================================================== */
 
 
-.section-content {
+  /* Content Styles
+  ========================================================================== */
 
-    /* Layout */
-    padding-left: 5%;
-    padding-right: 5%;
+  .section-content {
+
+      /* Layout */
+      padding-left: 5%;
+      padding-right: 5%;
+      display: block;
+      clear: both;
+
+      /* height */
+      min-height: 100vh;
+  }
+
+
+  /* Body Content */
+  .section-title{
+
+      /*Layout*/
+      text-align: center;
+
+      /* Font */
+      font-size: 3em;
+      font-weight: 300;
+
+      /* Color */
+      color: #5f9ea0; /* cadet blue */
+
+      /* Padding */
+      padding-top:5%;
+
+      /* Clearfix */ 
+      clear: both;
+
+      /* Transistion */
+      -webkit-transition: color 2s ease-out;
+      -moz-transition: color 2s ease-out;
+      -o-transition: color 2s ease-out;
+      transition: color 2s ease-out;
+  }
+
+  .p-title{
+      /* display */
+      display: block;
+
+      /* Color */
+      background: #5f9ea0; /* cadet blue */
+      color:  #f5f5f5; /*whitesmoke*/
+
+      /* Font */
+      font-weight: lighter;
+      text-align: center;
+  }
+  .p-section h1{
+      /* Size */
+      width: 50%;
+
+      /* Layout */
+      padding: 1%;
+      text-align: center;
+      margin:auto;
+  }
+
+
+  .center{
     display: block;
     clear: both;
+    text-align: center;
+  }
 
-    /* height */
-    min-height: 100vh;
-}
+  .cadetblue{ color: cadetblue;}
+
+  /* Nav Menu
+  ========================================================================== */
+  #nav {
+
+      /* Layout */
+      margin: 0 0 3% 0;
+      padding: 0;
+      position: fixed;
+      list-style: none;
+      width: 100%;
+      float: left;
+      vertical-align: middle;
+      top: 0;
+      z-index: 6;
+
+      /* Color */
+      color: cadetblue;
+      background: rgba(245,245,245,0.99);
+      background: #f0efe7;
 
 
-/* Body Content */
-.section-title{
+    -webkit-transition: top  0.5s ease-in-out;
+    -moz-transition: top  0.5s ease-in-out;
+    -o-transition: top  0.5s ease-in-out;
+    transition: top  0.5s ease-in-out;
+
+    -webkit-transition: opacity  0.5s ease-in-out;
+    -moz-transition: opacity  0.5s ease-in-out;
+    -o-transition: opacity  0.5s ease-in-out;
+    transition: opacity  0.5s ease-in-out;
+
+    -webkit-transition: all  0.5s ease-in-out;
+    -moz-transition: all  0.5s ease-in-out;
+    -o-transition: all  0.5s ease-in-out;
+    transition: all  0.5s ease-in-out;
+  }
+  .hasBoxShadow{
+
+  }
+  #nav li {
+
+      /* Layout */
+      float: right;
+      padding: 1.5%;
+      margin: 0;
+      line-height: 2em;
+
+
+      /* Cursor */
+      cursor: pointer;
+
+      /* Transistion */
+      -webkit-transition: background  200ms ease-in-out;
+      -moz-transition: background 200ms ease-in-out;
+      -ms-transition: background 200ms ease-in-out;
+      transition: background 200ms ease-in-out;
+  }
+  #nav a {
+      /* Layout */
+      display: block;
+
+      /* Text Decoration */
+      text-decoration: none;
+
+      /* Color */
+      color: #5f9ea0; /* cadet blue */
+  }
+  #nav li:hover {
+
+      /* Text Decoration */
+      text-decoration: underline;
+  }
+
+  #nav a {
+    /* Color */
+    color: cadetblue;
+
+    /* Text Decoration */
+    text-decoration: none;
+
+    /* Transition */
+    -webkit-transition: .2s ease;
+  }
+
+  /* Home
+  ========================================================================== */
+  .main-header{
+    /*Font*/
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 3em;
+    color: cadetblue;
 
     /*Layout*/
-    text-align: center;
-
-    /* Font */
-    font-size: 3em;
-    font-weight: 300;
-
-    /* Color */
-    color: #5f9ea0; /* cadet blue */
-
-    /* Padding */
-    padding-top:5%;
-
-    /* Clearfix */ 
-    clear: both;
-
-    /* Transistion */
-    -webkit-transition: color 2s ease-out;
-    -moz-transition: color 2s ease-out;
-    -o-transition: color 2s ease-out;
-    transition: color 2s ease-out;
-}
-
-.p-title{
-    /* display */
-    display: block;
-
-    /* Color */
-    background: #5f9ea0; /* cadet blue */
-    color:  #f5f5f5; /*whitesmoke*/
-
-    /* Font */
-    font-weight: lighter;
-    text-align: center;
-}
-.p-section h1{
-    /* Size */
-    width: 50%;
-
-    /* Layout */
-    padding: 1%;
-    text-align: center;
-    margin:auto;
-}
-
-
-.center{
-  display: block;
-  clear: both;
-  text-align: center;
-}
-
-.cadetblue{ color: cadetblue;}
-
-/* Home
-========================================================================== */
-.main-header{
-  /*Font*/
-  font-family: 'Lato';
-  font-weight: 300;
-  font-size: 3em;
-  color: cadetblue;
-
-  /*Layout*/
-  left: 2%;
-  top: 0;
-  position: absolute;
-  z-index: 20;
-}
-#my-home{
-
-    /* Color */
-    color: #5f9ea0; /* cadet blue */
-
-    /* Layout */
-    padding-top: 0;
-    top: 6em;
-    position: relative;
-
-    /* Text */
-    text-align: center;
-
-}
-
-.coral-background{
-    display: inline-table;
-    color:whitesmoke;
-    background: coral;
-    padding: 2%;
-}
-
-/* image of me */
-#home-img{
-
-    /* Background */
-    background: #1abc9c; /*turquoise*/
-    background: url('../img/DevanHuapaya.jpg')  no-repeat 20% center ;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding: 3%;
-
-    /* Border */
-    border-radius: 50%;
-    border: 0.5em solid cadetblue;
-
-    /* Display */
-    height: 12em;
-    width: 12em;
-    margin:auto;
-}
-
-.home-img-desc{
-  position: absolute;
-  float: right;
-  display: table;
-  width: 20%;
-  font-size: 3em;
-  font-weight: 400;
-  right: 10%;
-  top: 5%;
-  color: salmon;
-  /* Hover Opacity */
-  opacity: 0;
-
-    -webkit-transition: opacity  200ms ease-in-out;
-    -moz-transition: opacity 200ms ease-in-out;
-    -ms-transition: opacity 200ms ease-in-out;
-    transition: opacity 200ms ease-in-out;
-}
-
-.display-true{
-  opacity: 1;
-}
-#vision-statement{
-  font-size: 1.5em;
-  margin: 5% 10% 5% 10%;
-}
-.img_wrapper img{
-    position: absolute;
+    left: 2%;
     top: 0;
-    width: 100%;
+    position: absolute;
+    z-index: 20;
+  }
+  #my-home{
+
+      /* Color */
+      color: #5f9ea0; /* cadet blue */
+
+      /* Layout */
+      padding-top: 0;
+      top: 6em;
+      position: relative;
+
+      /* Text */
+      text-align: center;
+
+  }
+
+  .coral-background{
+      display: inline-table;
+      color:whitesmoke;
+      background: coral;
+      padding: 2%;
+  }
+
+  /* image of me */
+  #home-img{
+
+      /* Background */
+      background: #1abc9c; /*turquoise*/
+      background: url('../img/DevanHuapaya.jpg')  no-repeat 20% center ;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      /*padding: 3%;*/
+
+      /* Border */
+      border-radius: 50%;
+      border: 0.5em solid cadetblue;
+
+      /* Display */
+      height: 12em;
+      width: 12em;
+      margin:auto;
+  }
+
+  .home-img-desc{
+    position: absolute;
+    float: right;
+    display: table;
+    width: 20%;
+    font-size: 3em;
+    font-weight: 400;
+    right: 10%;
+    top: 5%;
+    color: salmon;
+    /* Hover Opacity */
     opacity: 0;
 
-    -webkit-transition: opacity 150ms;
-    -moz-transition: opacity 150ms;
-    -ms-transition: opacity 150ms;
-    transition: opacity 150ms;
-
-    -webkit-transition: opacity 150ms;
-    -moz-transition: opacity 150ms;
-    -ms-transition: opacity 150ms;
-    transition: opacity 150ms;
-}
-   
-
-/* Nav Menu
-========================================================================== */
-#nav {
-
-    /* Layout */
-    margin: 0 0 3% 0;
-    padding: 0;
-    position: fixed;
-    list-style: none;
-    width: 100%;
-    float: left;
-    vertical-align: middle;
-    top: 0;
-    z-index: 6;
-
-    /* Color */
-    color: cadetblue;
-    background: rgba(245,245,245,0.99);
-    background: #f0efe7;
-
-
-  -webkit-transition: top  0.5s ease-in-out;
-  -moz-transition: top  0.5s ease-in-out;
-  -o-transition: top  0.5s ease-in-out;
-  transition: top  0.5s ease-in-out;
-
-  -webkit-transition: opacity  0.5s ease-in-out;
-  -moz-transition: opacity  0.5s ease-in-out;
-  -o-transition: opacity  0.5s ease-in-out;
-  transition: opacity  0.5s ease-in-out;
-
-  -webkit-transition: all  0.5s ease-in-out;
-  -moz-transition: all  0.5s ease-in-out;
-  -o-transition: all  0.5s ease-in-out;
-  transition: all  0.5s ease-in-out;
-}
-.hasBoxShadow{
-
-}
-#nav li {
-
-    /* Layout */
-    float: right;
-    padding: 1.5%;
-    margin: 0;
-    line-height: 2em;
-
-
-    /* Cursor */
-    cursor: pointer;
-
-    /* Transistion */
-    -webkit-transition: background  200ms ease-in-out;
-    -moz-transition: background 200ms ease-in-out;
-    -ms-transition: background 200ms ease-in-out;
-    transition: background 200ms ease-in-out;
-}
-#nav a {
-    /* Layout */
-    display: block;
-
-    /* Text Decoration */
-    text-decoration: none;
-
-    /* Color */
-    color: #5f9ea0; /* cadet blue */
-}
-#nav li:hover {
-
-    /* Text Decoration */
-    text-decoration: underline;
-}
-
-#nav a {
-  /* Color */
-  color: cadetblue;
-
-  /* Text Decoration */
-  text-decoration: none;
-
-  /* Transition */
-  -webkit-transition: .2s ease;
-}
-.row{
-    width: 100%;
-    clear: both;
-    display: table;
-    background-color: purple;
-    padding: 5%;
-}
-/* Jobs
-========================================================================== */
-.project{
-    /* layout */
-    margin:3% 0 0 0;
-    width: 100%;
-    /*min-height: 5em;*/
-    height: 100%;
-
-    /* color */
-    position: relative;
-    text-align: center;
-    color:#5b4636;
-    text-rendering:optimizeLegibility;
-
-
-    /* Cursor */
-    cursor:pointer;
-
-    /* Transistion */
-    -webkit-transition: background-color .2s ease-in-out;
-    -moz-transition: background-color .2s ease-in-out;
-    -o-transition: background-color .2s ease-in-out;
-    transition: background-color .2s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-}
-.project:hover{
-
-    background-color: rgba(255, 255, 255, 0.5);
-
-    /* Box Shadow */
-    -webkit-box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3); 
-}
-
-.project:hover  .project-img{
-  border-radius: 0;
-  visibility: none;
-}
-
-
-.project-title{
-
-    /* Layout */
-    padding-bottom: 2%;
-    text-align: center;
-    padding: 8% 0%;
-    display: block;
-    z-index: 3;
-
-    /* Text */
-    color: cadetblue;
-}
-.project-text{
-    /* Font */
-    font-size: 0.8em;
-    text-align:left;
-    line-height: 1.75em;
-    padding: 3%;
-    display:default;
-}
-.side-note{
-    /* Color */
-    color: rgba(0,0,0,0.7);
-}
-
-.job, .project
-.job ul, .project ul{
-    list-style: none;
-    margin:0;
-    padding:0;
-}
-. project a.obvious-link{
-  position: absolute;
-  bottom: 2%;
-  color: inherit;
-}
-.project-img{
-    /* display */
-    display: block;
-    height: 12.5em;
-
-    /* background */
-    background-color: rgba(0,0,0,0.6);
-    background-position: right;
-    background-size: fill;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-
-
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition:  all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-}
-#ge-img{
-    background-image: url('../img/ge.jpg');
-    background-position: center bottom;
-}
-#cgi-img{
-    background-image: url('../img/cgiLogo.jpg');
-    background-position: center;
-}
-#hdc-img{
-    background-image: url('../img/hdc.jpg');
-    background-position: center bottom;
-}
-#kanm-img{
-    background-image: url('../img/kanm.png');
-    background-size:  300%;
-    background-position: top left;
-}
-.border-shadow{
-  border-bottom: 1px solid cadetblue;
-  /*-moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black;*/
-}
-
-
-
-/* Projects
-========================================================================== */
-#hdctools-img{
-    background-image: url('../img/hdctools.png');
-    background-position: left;
-}
-#smart-img{
-    background-image: url('../img/smart.png');
-    background-size:  300%;
-    background-position: center;
-}
-#horsu-raysu-img{
-    background-image: url('../img/horsu.png');
-    background-position: left;
-}
-#culture-hunt-img{
-    background-image: url('../img/culturehunt.png');
-    background-size:  cover;
-    background-position: right top;
-}
-#rubiks-cube-solver-img{
-    background-image: url('../img/rubikssolver.jpg');
-    background-position: center;
-}
-#ray-tracer-img{
-    background-image: url('../img/raytracer.jpg');
-}
-#sign-2-line-img{
-    background-image: url('../img/aslt.png');
-    /*background-size:  cover;  */
-    background-position: left;
-}
-#internets-img{
-    background-image: url('../img/cat.jpg');
-}
-
-/* Contact
-========================================================================== */
-#contact-info-wrapper{
-    /* Layout */
-    position: absolute;
-    margin-top:2.5%;
-    width: 100%;  
-    left:0;
-    z-index: 2;
-
-    /* Font */
-    color: #F5F5F5;
-    font-size: 1.5em;
-
-}
-#contact-info{
-    margin:10%;
-    width: 50%;
-}
-.email, .email:visited, .social a:visited,  .social a{
-    text-decoration: none;
-    color: cadetblue;
-    text-decoration: none;
-    font-size: 1.5em; 
-}
-.atgmail a, .atgmail a:visited{
-    text-decoration: none;
-    color: cadetblue;
-}
-.social{
-  font-family: "Genericons";
-  font-size: 1.75em;
-}
-.social a:hover, .email:hover{
-  color: coral;
-}
-/* Column Layout
-========================================================================== */
-.col1{
-    margin-left: 5%;
-    width: 90%;
-    margin-right: 5%;
-}
-.col2{
-    float:left;
-    margin-left: 3%;
-    width: 45.5%;
-}
-.col3{
-    margin-left: 3%;
-    width: 29.33;
-}
-
-.col4 > div{
-    float:left;
-    margin-left: 3.3333%;
-    width: 20%;
-    min-width: 11em;
-
-}
-.col4{
-    clear: both;
-    background: purple;
-    max-width: 60em;
-    margin: auto;
-}
-
-/* Slide in animation
-========================================================================== */
-
-
-.read-less{
-   position: absolute;
-   bottom: 0;
-   text-align: center;
-}
-/* Obvious Links
-========================================================================== */
-a.obvious-link,
-a.obvious-link:visited {
-
-    /* Font */
-    color:#F5F5F5; /* Whitesmoke */
-    text-decoration: underline;
-    font-size: 1.2em;
-    font-weight: 300;
-
-    /* Visibility - set to hidden, until implemented */
-    /*visibility: hidden;*/
-    display: block;
-    width: 100%;
-    text-align: center;
-    /* Cursor */
-    cursor: pointer;
-
-    /* Transistion */
-    -webkit-transition: color .2s ease-in-out;
-    -moz-transition: color .2s ease-in-out;
-    -o-transition: color .2s ease-in-out;
-    transition: color .2s ease-in-out;
-
-    -webkit-transition: text-shadow .2s ease-in-out;
-    -moz-transition: text-shadow .2s ease-in-out;
-    -o-transition: text-shadow .2s ease-in-out;
-    transition: text-shadow .2s ease-in-out;
-}
-.project:hover a.obvious-link,
-a.obvious-link:visited:hover{
-    /*color: white;*/
-    /*text-shadow: 0.1em 0em 0.1em rgba(1,1,1,0.9);*/
-}
-/* Pop Up
-========================================================================== */
-  #main-container{
-    position: absolute;
-    /*overflow-y:scroll;*/
+      -webkit-transition: opacity  200ms ease-in-out;
+      -moz-transition: opacity 200ms ease-in-out;
+      -ms-transition: opacity 200ms ease-in-out;
+      transition: opacity 200ms ease-in-out;
   }
 
-.read-more-content{
-  
-  /* Layout */\
-  height: 100%; width: 100%;
-  top: 0;
-  bottom: 0;
-
-  display: none;
-  position: fixed;
-  overflow: scroll;
-  z-index: 7;  
-  margin: 0;
-
-  /*Color */
-  background-color: #f2f2f2;
-
-  
-
-  /* Ovewrflow */
-  overflow-y: scroll; 
-
-  /*Trasitions*/
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  
-}
-
-
-.read-more-content a.obvious-link{
-    color: cadetblue;
-    /* Transistion */
-    -webkit-transition: color .2s ease-in-out;
-    -moz-transition: color .2s ease-in-out;
-    -o-transition: color .2s ease-in-out;
-    transition: color .2s ease-in-out;
-}
-.read-more-content a.obvious-link:hover{
-    color: #9FDEE0 ;/* Belize Hole */
-    text-shadow:none;
-}
-
-.read-more-exit-button{
-  /* Layout */
-  margin:1%;
-  position:absolute;
-  z-index:2;
-  right:0;
-  text-align:center;
-  line-height:1.5em;
-  width: 1.5em; 
-  
-  /* Font */
-  font-size:2em;
-  color: #f2f2f2;
-  
-  /* Cursor */
-  cursor: pointer;
-  
-  /* Background */
-  background: #d34836;
-  border-radius: 50%;
-  box-shadow: 0 0 .5em rgba(0,0,0,0.5);
-  -webkit-transition: box-shadow 0.1s ease-in-out;
-  -moz-transition: box-shadow 0.1s ease-in-out;
-  -o-transition: box-shadow 0.1s ease-in-out;
-  transition: box-shadow 0.1s ease-in-out;
-
-}
-.read-more-exit-button:hover{
-  box-shadow: 0 0 .25em rgba(0,0,0,0.5);
-}
-.read-more-title{
-  /* Layout */
-  text-align: center;
-  display: inline-block;
-  line-height: 2.5em;
-  position: relative;
-  width: 100%;
-  
-  /* Font */
-  font-size: 3em;
-  
-  /* Color */
-  color: #f2f2f2;
-  background: turquoise;
-  background-image: -webkit-linear-gradient( right,turquoise, mediumseagreen);
-  background-image: -moz-linear-gradient( right,turquoise, mediumseagreen);
-  background-image: -o-linear-gradient( right,turquoise, mediumseagreen);
-  background-image: linear-gradient( right,turquoise, mediumseagreen);
-  background: cadetblue;
-   background: #f0efe7;
-
-    color:#5b4636;
-}
-.read-more-title span{
-
-  background-image: -webkit-linear-gradient( right,turquoise, mediumseagreen);
-  background-image: -moz-linear-gradient( right,turquoise, mediumseagreen);
-  background-image: -o-linear-gradient( right,turquoise, mediumseagreen);
-  background-image: linear-gradient( right,turquoise, mediumseagreen);
-
-    color: transparent;
-    -webkit-transition: .1s .2s;
-    -webkit-background-clip: text;
-}
-
-.read-more-description p {
-  margin: 3% 5%;
-}
-
-
-.p-zoom-in{
+  .display-true{
     opacity: 1;
-
-    -webkit-transform: scale(1); 
-    -moz-transform: scale(1); 
-    -ms-transform: scale(1); 
-    -o-transform: scale(1); 
-    transform: scale(1); 
-}
-/* ==========================================================================
-   Media Queries for Responsive Design.
-   ========================================================================== */
-
-@media only screen and (min-width: 1405px) {
-    #home-link2{display:none;}
-}
-
-@media only screen and (max-width: 1405px)  and (min-width: 1001px){
-
-  .project-img{
-    border-radius: 0;
   }
-  /* I know I shouldn't use !important,
-     but it was being overridden by the #nav a
-     selector, feel free to tell me why the id
-     selector is being overridden by a class
-     selector, because I would love to know!
-   */=
-  #home-link{display: none !important ;}
-  #home-link2{display:block;}
-  .section-title{padding-top: 10%;}
-  .col4 > div{ 
-      margin-left:10%;  
-      width: 80%;
+  #vision-statement{
+    font-size: 1.5em;
+    margin: 5% 10% 5% 10%;
+  }
+  .img_wrapper img{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      opacity: 0;
+
+      -webkit-transition: opacity 150ms;
+      -moz-transition: opacity 150ms;
+      -ms-transition: opacity 150ms;
+      transition: opacity 150ms;
+
+      -webkit-transition: opacity 150ms;
+      -moz-transition: opacity 150ms;
+      -ms-transition: opacity 150ms;
+      transition: opacity 150ms;
+  }
+     
+
+  /* Projects & Jobs
+  ========================================================================== */
+  .project{
+      /* layout */
+      margin:3% 0 0 0;
+      width: 100%;
+      /*min-height: 5em;*/
+      height: 100%;
+
+      /* color */
+      position: relative;
+      text-align: center;
+      color:#5b4636;
+      text-rendering:optimizeLegibility;
+
+
+      /* Cursor */
+      cursor:pointer;
+
+      /* Transistion */
+      -webkit-transition: background-color .2s ease-in-out;
+      -moz-transition: background-color .2s ease-in-out;
+      -o-transition: background-color .2s ease-in-out;
+      transition: background-color .2s ease-in-out;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+  }
+  .project:hover{
+
+      background-color: rgba(255, 255, 255, 0.5);
+
+      /* Box Shadow */
+      -webkit-box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3); 
+  }
+
+  .project:hover  .project-img{
+    border-radius: 0;
+    visibility: none;
+  }
+
+
+  .project-title{
+
+      /* Layout */
+      padding-bottom: 2%;
+      text-align: center;
+      padding: 8% 0%;
+      display: block;
+      z-index: 3;
+
+      /* Text */
+      color: cadetblue;
+  }
+  .project-text{
+      /* Font */
+      font-size: 0.8em;
+      text-align:left;
+      line-height: 1.75em;
+      padding: 3%;
+      display:default;
+  }
+  .side-note{
+      /* Color */
+      color: rgba(0,0,0,0.7);
+  }
+
+  .job, .project
+  .job ul, .project ul{
+      list-style: none;
+      margin:0;
+      padding:0;
+  }
+  . project a.obvious-link{
+    position: absolute;
+    bottom: 2%;
+    color: inherit;
+  }
+  .project-img{
+      /* display */
+      display: block;
+      height: 12.5em;
+
+      /* background */
+      background-color: rgba(0,0,0,0.6);
+      background-position: right;
+      background-size: fill;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 50%;
+
+
+      -webkit-transition: all .2s ease-in-out;
+      -moz-transition: all .2s ease-in-out;
+      -o-transition:  all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+  }
+  #ge-img{
+      background-image: url('../img/ge.jpg');
+      background-position: center bottom;
+  }
+  #cgi-img{
+      background-image: url('../img/cgiLogo.jpg');
+      background-position: center;
+  }
+  #hdc-img{
+      background-image: url('../img/hdc.jpg');
+      background-position: center bottom;
+  }
+  #kanm-img{
+      background-image: url('../img/kanm.png');
+      background-size:  300%;
+      background-position: top left;
+  }
+  .border-shadow{
+    border-bottom: 1px solid cadetblue;
+  }
+
+
+
+  /* Projects
+  ========================================================================== */
+  #hdctools-img{
+      background-image: url('../img/hdctools.png');
+      background-position: left;
+  }
+  #smart-img{
+      background-image: url('../img/smart.png');
+      background-size:  300%;
+      background-position: center;
+  }
+  #horsu-raysu-img{
+      background-image: url('../img/horsu.png');
+      background-position: left;
+  }
+  #culture-hunt-img{
+      background-image: url('../img/culturehunt.png');
+      background-size:  cover;
+      background-position: right top;
+  }
+  #rubiks-cube-solver-img{
+      background-image: url('../img/rubikssolver.jpg');
+      background-position: center;
+  }
+  #ray-tracer-img{
+      background-image: url('../img/raytracer.jpg');
+  }
+  #sign-2-line-img{
+      background-image: url('../img/aslt.png');
+      /*background-size:  cover;  */
+      background-position: left;
+  }
+  #internets-img{
+      background-image: url('../img/cat.jpg');
+  }
+
+  /* Contact Section
+  ========================================================================== */
+  #contact-info-wrapper{
+      /* Layout */
+      position: absolute;
+      margin-top:2.5%;
+      width: 100%;  
+      left:0;
+      z-index: 2;
+
+      /* Font */
+      color: #F5F5F5;
+      font-size: 1.5em;
+
+  }
+  #contact-info{
+      margin:10%;
+      width: 50%;
+  }
+  .email, .email:visited, .social a:visited,  .social a{
+      text-decoration: none;
+      color: cadetblue;
+      text-decoration: none;
+      font-size: 1.5em; 
+  }
+  .atgmail a, .atgmail a:visited{
+      text-decoration: none;
+      color: cadetblue;
+  }
+  .social{
+    font-family: "Genericons";
+    font-size: 1.75em;
+  }
+  .social a:hover, .email:hover{
+    color: coral;
+  }
+
+  /* Column Layouts
+  ========================================================================== */
+  .col1{
+      margin-left: 5%;
+      width: 90%;
+      margin-right: 5%;
+  }
+  .col2{
+      float:left;
+      margin-left: 3%;
+      width: 45.5%;
+  }
+  .col3{
+      margin-left: 3%;
+      width: 29.33;
+  }
+
+  .col4 > div{
+      float:left;
+      margin: 2.5%;
+      width: 20%;
+      min-width: 11em;
+
+  }
+  .col4{
+      clear: both;
+      background: purple;
+      max-width: 60em;
+      margin: auto;
+  }
+
+  .row{
+      width: 100%;
+      clear: both;
+      display: table;
+      background-color: purple;
+      /*padding: 5%;*/
+  }
+
+
+  /* "Read More" Styles
+  ========================================================================== */
+  /* This one is not specifically 'read-more' but helps with moving
+      the main container out of the way */
+    #main-container{
+      top:0; right: 0; left: 0; bottom: 0;
+      position: absolute;    
+      overflow-x:none;
     }
 
-  #nav {font-size: 0.7em;}
+  .read-more-content{
+    
+    /* Layout */
+    height: 100%; width: 100%;
+    top: 0;
+    bottom: 0;
 
-  
-  .come-in {
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
+    display: none;
+    position: fixed;
+    overflow: scroll;
+    z-index: 7;  
+    margin: 0;
+
+    /*Color */
+    background-color: #f2f2f2;
+
+    
+
+    /* Ovewrflow */
+    overflow-y: scroll; 
+
+    /*Trasitions*/
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    
+  }
+
+
+  .read-more-content a.obvious-link{
+      color: cadetblue;
+      /* Transistion */
+      -webkit-transition: color .2s ease-in-out;
+      -moz-transition: color .2s ease-in-out;
+      -o-transition: color .2s ease-in-out;
+      transition: color .2s ease-in-out;
+  }
+  .read-more-content a.obvious-link:hover{
+      color: #9FDEE0 ;/* Belize Hole */
+      text-shadow:none;
+  }
+
+  .read-more-exit-button{
+    /* Layout */
+    margin:1%;
+    position:absolute;
+    z-index:2;
+    right:0;
+    text-align:center;
+    line-height:1.5em;
+    width: 1.5em; 
+    
+    /* Font */
+    font-size:2em;
+    color: #f2f2f2;
+    
+    /* Cursor */
+    cursor: pointer;
+    
+    /* Background */
+    background: #d34836;
+    border-radius: 50%;
+    box-shadow: 0 0 .5em rgba(0,0,0,0.5);
+    -webkit-transition: box-shadow 0.1s ease-in-out;
+    -moz-transition: box-shadow 0.1s ease-in-out;
+    -o-transition: box-shadow 0.1s ease-in-out;
+    transition: box-shadow 0.1s ease-in-out;
+
+  }
+  .read-more-exit-button:hover{
+    box-shadow: 0 0 .25em rgba(0,0,0,0.5);
+  }
+  .read-more-title{
+    /* Layout */
+    text-align: center;
+    display: inline-block;
+    line-height: 2.5em;
+    position: relative;
+    width: 100%;
+    
+    /* Font */
+    font-size: 3em;
+    
+    /* Color */
+    color: #f2f2f2;
+    background: turquoise;
+    background-image: -webkit-linear-gradient( right,turquoise, mediumseagreen);
+    background-image: -moz-linear-gradient( right,turquoise, mediumseagreen);
+    background-image: -o-linear-gradient( right,turquoise, mediumseagreen);
+    background-image: linear-gradient( right,turquoise, mediumseagreen);
+    background: cadetblue;
+     background: #f0efe7;
+
+      color:#5b4636;
+  }
+  .read-more-title span{
+
+    background-image: -webkit-linear-gradient( right,turquoise, mediumseagreen);
+    background-image: -moz-linear-gradient( right,turquoise, mediumseagreen);
+    background-image: -o-linear-gradient( right,turquoise, mediumseagreen);
+    background-image: linear-gradient( right,turquoise, mediumseagreen);
+
+      color: transparent;
+      -webkit-transition: .1s .2s;
+      -webkit-background-clip: text;
+  }
+
+  .read-more-description p {
+    margin: 3% 5%;
+  }
+
+  /* ==========================================================================
+     Media Queries for Responsive Design.
+     My laptop (in chrome)
+     Full screen: 1600 x 779;
+     Half Screen: 790 x 758;
+
+     1500
+     - Projects look weird;
+     1300
+     - Header colides with menu
+     ========================================================================== */
+  /* Smaller screens ----------- */
+  @media only screen 
+  and (max-width : 1500px) {
+
+    .main-header{
+      top: 1em;
+      width: 100%;
+      text-align: center;
     }
-    #home-img-desc{
+    #my-home{
+      top: 7em;
+      margin-bottom: 2%;
+    }
+    .home-img-desc{
       display: none !important;
     }
-
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .col4 > div{ 
-      margin-left:5%;  
-      width: 90%;
-      box-shadow:   0px 2px 2px rgba(0,0,0,0.3);
+    #experience-section{
+      margin-top: 12%;
     }
-    .main-header, .section-title{
+  }
+
+  /* Desktops and laptops 3/4 Width ----------- */
+  @media only screen 
+  and (max-width : 1098px) 
+  and (min-width : 791px){
+    .col4{
+      max-width: 30em;
+    }  
+    .col4 > div {
+      width: 40%;
+      margin: 5%;
+    }
+  }
+
+  /* Desktops and laptops Half Width ----------- */
+  @media only screen 
+  and (max-width : 790px) {
+    .col4{
+      max-width: 13em;
+    }  
+    .col4 > div {
+      width: 100%;
+      margin: 5% 0%;
+    }
+  }
+
+  /* Smartphones (portrait and landscape) ----------- */
+  @media only screen 
+  and (max-width : 480px) {
+
+    html{
+      font-size: 0.8em;
+    }
+    /*
+    .main-header{
+      top: 1.3em;
       font-size: 2em;
     }
-    .main-header{
-      
+    #nav li{
+      font-size: 0.8em;
     }
-}
+    .section-title{
+      font-size: 2em;
+    }
+    #contact-info{
+      width: 90%;
+      margin: 5%;
+    }
+    .email{
+      font-size: 1.2em;
+    }
+    #experience-section{
+      margin-top: 30%;
+    }*/
+  }
+
+  /* Smartphones (landscape) ----------- */
+  @media only screen 
+  and (min-width : 400px) {
+  /* Styles */
+  }
+
+  /* Smartphones (portrait) ----------- */
+  @media only screen 
+  and (max-width : 400px) {
+    /*
+    #nav li{
+      font-size: 0.6em;
+    }
+    .section-title{
+      font-size: 1.50em;
+    }
+    #vision-statement{
+      font-size: 1em;
+    }
+    .email{
+      font-size: 1em;
+    }*/
+  }
+
+  /* iPads (portrait and landscape) & Small Screens----------- */
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) {
+  /* Styles */
+
+  }
+
+  /* iPads (landscape) ----------- */
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) 
+  and (orientation : landscape) {
+  /* Styles */
+  }
+
+  /* iPads (portrait) ----------- */
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) 
+  and (orientation : portrait) {
+  /* Styles */
+  }
 
 
 
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
 
-.cf:after {
-    clear: both;
-}
+  /**
+   * For modern browsers
+   * 1. The space content is one way to avoid an Opera bug when the
+   *    contenteditable attribute is included anywhere else in the document.
+   *    Otherwise it causes space to appear at the top and bottom of elements
+   *    that are clearfixed.
+   * 2. The use of `table` rather than `block` is only necessary if using
+   *    `:before` to contain the top-margins of child elements.
+   */
+  .cf:before,
+  .cf:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+  }
 
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.cf {
-    *zoom: 1;
-}
+  .cf:after {
+      clear: both;
+  }
+
+  /**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */
+  .cf {
+      *zoom: 1;
+  }
