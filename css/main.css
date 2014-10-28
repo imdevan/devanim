@@ -263,7 +263,7 @@
     left: 2%;
     top: 0;
     position: absolute;
-    z-index: 20;
+    z-index: 4;
   }
   #my-home{
 
@@ -373,10 +373,6 @@
       cursor:pointer;
 
       /* Transistion */
-      -webkit-transition: background-color .2s ease-in-out;
-      -moz-transition: background-color .2s ease-in-out;
-      -o-transition: background-color .2s ease-in-out;
-      transition: background-color .2s ease-in-out;
       -webkit-transition: all .5s ease-in-out;
       -moz-transition: all .5s ease-in-out;
       -o-transition: all .5s ease-in-out;
@@ -582,8 +578,6 @@
       width: 100%;
       clear: both;
       display: table;
-      background-color: purple;
-      /*padding: 5%;*/
   }
 
 
@@ -608,7 +602,7 @@
     display: none;
     position: fixed;
     overflow: scroll;
-    z-index: 4;  
+    z-index: 5;  
     margin: 0;
 
     /*Color */
@@ -643,7 +637,7 @@
 
   .read-more-exit-button{
     /* Layout */
-    margin:1%;
+    margin: 0% 3%;
     position:absolute;
     z-index:2;
     right:0;
@@ -653,24 +647,24 @@
     
     /* Font */
     font-family: "Genericons";
-    font-size:2em;
+    font-size:2.5em;
     color: #f2f2f2;
     
     /* Cursor */
     cursor: pointer;
     
     /* Background */
-    background: #d34836;
+    background: cadetblue;
     border-radius: 50%;
-    box-shadow: 0 0 .5em rgba(0,0,0,0.5);
-    -webkit-transition: box-shadow 0.1s ease-in-out;
-    -moz-transition: box-shadow 0.1s ease-in-out;
-    -o-transition: box-shadow 0.1s ease-in-out;
-    transition: box-shadow 0.1s ease-in-out;
+    box-shadow: 0 0 .25em rgba(0,0,0,0.5);
+    -webkit-transition: box-shadow 0.5s ease-in-out;
+    -moz-transition: box-shadow 0.5s ease-in-out;
+    -o-transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in-out;
 
   }
   .read-more-exit-button:hover{
-    box-shadow: 0 0 .25em rgba(0,0,0,0.5);
+    box-shadow: 0 0 .5em rgba(0,0,0,0.5);
   }
   .read-more-title{
     /* Layout */
@@ -775,75 +769,6 @@
     html{
       font-size: 0.8em;
     }
-    /*
-    .main-header{
-      top: 1.3em;
-      font-size: 2em;
-    }
-    #nav li{
-      font-size: 0.8em;
-    }
-    .section-title{
-      font-size: 2em;
-    }
-    #contact-info{
-      width: 90%;
-      margin: 5%;
-    }
-    .email{
-      font-size: 1.2em;
-    }
-    #experience-section{
-      margin-top: 30%;
-    }*/
-  }
-
-  /* Smartphones (landscape) ----------- */
-  @media only screen 
-  and (min-width : 400px) {
-  /* Styles */
-  }
-
-  /* Smartphones (portrait) ----------- */
-  @media only screen 
-  and (max-width : 400px) {
-    /*
-    #nav li{
-      font-size: 0.6em;
-    }
-    .section-title{
-      font-size: 1.50em;
-    }
-    #vision-statement{
-      font-size: 1em;
-    }
-    .email{
-      font-size: 1em;
-    }*/
-  }
-
-  /* iPads (portrait and landscape) & Small Screens----------- */
-  @media only screen 
-  and (min-device-width : 768px) 
-  and (max-device-width : 1024px) {
-  /* Styles */
-
-  }
-
-  /* iPads (landscape) ----------- */
-  @media only screen 
-  and (min-device-width : 768px) 
-  and (max-device-width : 1024px) 
-  and (orientation : landscape) {
-  /* Styles */
-  }
-
-  /* iPads (portrait) ----------- */
-  @media only screen 
-  and (min-device-width : 768px) 
-  and (max-device-width : 1024px) 
-  and (orientation : portrait) {
-  /* Styles */
   }
 
 

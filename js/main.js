@@ -39,12 +39,16 @@ rmButton.on('click', function(){
   rmTitle.html(_this.title);
   rmDescription.html(_this.description);
 
+  // set exit button to halfway on title 
+  rmExitButton.css('top', parseInt(rmTitle.css('line-height')) - parseInt(rmExitButton.css('line-height'))/2);
+
   // Remove leftover css from remove
   rmContent.removeClass('fadeOutLeft');
   mainC.removeClass('fadeInRight');
 
   // Show read-more content
   rmContent.show();
+  // Fade in
   rmContent.addClass('fadeInLeft');
   mainC.addClass('fadeOutRight');
 
