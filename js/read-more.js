@@ -68,39 +68,46 @@ var ReadMore = {
 	  	},
 		horsuraysu: {
 	    	title: 'The Race!',
-	    	description: "<p> \
+	    	description: '<p> \
                                             I had a lot of fun working on this project, why? \
                                             Because I was working with an awesome team, working with cool technology.\
                                             Everyone one the team did a kick butt job of doing their part.\
                                         </p>\
-                                        <p>\
-                                            Following is a link to an early version of the game. Hit numbers to make each horse move, 'r' to move them all randomly, and space bar to reset.\
-                                        </p>\
-                                        <p>\
-                                            <br><a target='_blank' class='obvious-link center' href='http://helloruiz.com/horsu/'>The Race</a>\
-                                        </p>"
+			            <p class="col1" >\
+			               	<img class="rm-p-img"src="img/sc/rc_sc/rc_sc1_ipadair2_spacegrey_landscape.png"></img>\
+			            </p>'
 	  	},
 		culturehunt: {
-	    	title: 'Culture Hunt',
-	    	description: '<p>\
-                                            The idea for Culture Hunt came from the idea of being able to make cultural engagement into a game. It uses the Google Maps API in order to showcase different cultural sights in the Houston area. When the user click on a location they are presented with information about that location, such as a description, open hours, and a picture. The user can then select to "check-in," at which point the device they are on would call the Google Maps API again to test their location. If the user is close to the area they get points which contribute to their over all score so that they may compete to be the must culturally traveled in the Houston area, or just have fun seeing sights.\
-                                        </p>\
-                                        <img class="col1" src="img/ch_sc1.png"></img>\
-                                        <p>\
-                                            Since the Houston Hackathon, the Boniuk Institute at Rice University has organized a team who are working to make the culture hunt idea fully operational. I and 7 other people meet on a regular basis to discuss where we want the app to go, and what each of us can do to contribute.\
-                                        </p>\
-                                        <p>\
-                                            Following is a link to an early version of the game. Please be sure to share your location for the game to work properly. Also, everything is in the Houston area, please keep that in mind as well.\
-                                        </p>\
-                                        <p>\
-                                            <br><a target="_blank" class="obvious-link center" href="http://culturehunt.devan.im">Culture Hunt</a><br>\
-                                        </p>'
+			title: 'Culture Hunt',
+			description: '\
+			            <p class="col1" >\
+			               	<img class="rm-p-img"src="img/sc/ch_sc/ch_sc1_iphone6_spacegrey_portrait.png"></img>\
+			            </p>\
+			            <p>\
+			                The idea for Culture Hunt came from the idea of being able to make cultural engagement into a game. It uses the Google Maps API in order to showcase different cultural sights in the Houston area. When the user click on a location they are presented with information about that location, such as a description, open hours, and a picture. The user can then select to "check-in," at which point the device they are on would call the Google Maps API again to test their location. If the user is close to the area they get points which contribute to their over all score so that they may compete to be the must culturally traveled in the Houston area, or just have fun seeing sights.\
+			            </p>\
+			            <p class="col1" >\
+			               	<img class="rm-p-img-small-left"src="img/sc/ch_sc/ch_sc2_iphone6_spacegrey_side1.png"></img>\
+			            </p>\
+			            <p>\
+			                Since the Houston Hackathon, the Boniuk Institute at Rice University has organized a team who are working to make the culture hunt idea fully operational. I and 7 other people meet on a regular basis to discuss where we want the app to go, and what each of us can do to contribute.\
+			            </p>\
+			            <p>\
+			                Following is a link to an early version of the game. Please be sure to share your location for the game to work properly. Also, everything is in the Houston area, please keep that in mind as well.\
+			            </p>\
+			            <p>\
+			                <br><a target="_blank" class="obvious-link center" href="http://culturehunt.devan.im">Culture Hunt</a><br>\
+			            </p>'
 	  	},
 		smart: {
 	    	title: 'S.M.A.R.T.',
-	    	description: '<p>\
-                                            Smart App was a web app created at the A&M student run hackathon "Hackerbowl." The purpose of app was to help the user set and organize "S.M.A.R.T." goals. The app would walk the user through the process of setting goals, and then user could check back in on a regular basis and get points for working towards their goals. The app idea was simple, yet elegant in desgin. \
-                                        </p>'
+	    	description: '\
+			            <p class=\"col1\" >\
+			               	<img class=\"rm-p-img-extra-small-left\"src=\"img/sc/smart/smart_sc1.png\"></img>\
+			            </p>\
+			            <p>\
+                            Smart App was a web app created at the A&M student run hackathon "Hackerbowl." The purpose of app was to help the user set and organize "S.M.A.R.T." goals. The app would walk the user through the process of setting goals, and then user could check back in on a regular basis and get points for working towards their goals. The app idea was simple, yet elegant in desgin. \
+                        </p>'
 	  	},
 		rubikscubesolver: {
 	    	title: "Rubik's Cube Solver",
@@ -118,36 +125,47 @@ var ReadMore = {
 	  	},
 	  	scheduler: {
 	  		title: "HDC Tools",
-	  		description: '<p> \
-	The HDC Tools project, is a project that I worked on for the Texas A&M Central Help Desk that I had initiated and worked on. The purpose of the project was to re-design an outdated system that the Help Desk is using in order to represent our scheduling system in a easy to read, mobile friendly manner. \
-</p> \
-<p> \
- 	This project gave me a lot of experience in estabilishing an enterprise project from the project managment perspective. The project is still under development at the Help Desk, which I have left at this point. However, feel free to check out an intial prototype of the site bellow.\
-</p> \
-<p>\
-    <a target="_blank" class="obvious-link center" href="http://devan.im/hdctools">HDC Tools</a><br>\
-</p>'
+	  		description: '\
+			            <p class=\"col1\" >\
+			               	<img class=\"rm-p-img-large\"src=\"img/sc/hdc_sc1/hdc_sc1_imac2013_front.png\"></img>\
+			            </p>\
+			            <p> \
+							The HDC Tools project, is a project that I worked on for the Texas A&M Central Help Desk that I had initiated and worked on. The purpose of the project was to re-design an outdated system that the Help Desk is using in order to represent our scheduling system in a easy to read, mobile friendly manner. \
+						</p> \
+						    <p class=\"col1\" >\
+						       	<img class=\"rm-p-img-small-right\"src=\"img/sc/hdc_sc2/hdc_sc2_nexus4_portrait.png\"></img>\
+						    </p>\
+						<p> \
+						 	This project gave me a lot of experience in estabilishing an enterprise project from the project managment perspective. The project is still under development at the Help Desk, which I have left at this point. However, feel free to check out an intial prototype of the site bellow.\
+						</p> \
+						<p>\
+						    <a target="_blank" class="obvious-link center" href="http://devan.im/hdctools">HDC Tools</a><br>\
+						</p>'
 	  	},
 	  	sign2line: {
 	  		title: "Sign 2 Line",
-	  		description: "<p>\
-			                    Sign-2-Line is an app that I made with 2 other Texas A&M students at LSU's first hackathon 'GeauxHack.' The purpose of the app is to translate American Sign Language into text using the <a target='_blank' class='obvious-link' href='https://www.leapmotion.com/'>Leap Motion.</a> We managed to code around 10 different phrases that the leep motion detected, and printed to the screen.  \
-			                </p>\
-			                <p>\
-			                    In addition to translating ASL, we used the SendGrid api to add the ability to email a record of the translation to a user, so that they can keep track of their conversations. \
-			                </p>\
-			                <p>\
-			                    Feel free to check out the app bellow, if you have a Leap Motion. You can also check out our page on Challenge Post, which is currently featured as a staff pick! \
-			                </p>\
-			                <p>\
-			                    <br><a target='_blank' class='obvious-link center' href='http://challengepost.com/software/sign2line-pofh7#_=_'>Challenge Post Page</a>\
-			                </p>\
-			                <p>\
-			                     <br><a target='_blank' class='obvious-link center' href='http://sign2line.devan.im/'>Sign 2 Line</a>\
-			                </p>"
+	  		description: "\
+			            <p class=\"col1\" >\
+			               	<img class=\"rm-p-img-large\"src=\"img/sc/sign2line/sign2line sc1_imac2013_front.png\"></img>\
+			            </p>\
+			            <p>\
+		                    Sign-2-Line is an app that I made with 2 other Texas A&M students at LSU's first hackathon 'GeauxHack.' The purpose of the app is to translate American Sign Language into text using the <a target='_blank' class='obvious-link' href='https://www.leapmotion.com/'>Leap Motion.</a> We managed to code around 10 different phrases that the Leap Motion detected, and printed to the screen.  \
+		                </p>\
+		                <p>\
+		                    In addition to translating ASL, we used the SendGrid api to add the ability to email a record of the translation to a user, so that they can keep track of their conversations. \
+		                </p>\
+		                <p>\
+		                    Feel free to check out the app bellow, if you have a Leap Motion. You can also check out our page on Challenge Post, which is currently featured as a staff pick! \
+		                </p>\
+		                <p>\
+		                    <br><a target='_blank' class='obvious-link center' href='http://challengepost.com/software/sign2line-pofh7#_=_'>Challenge Post Page</a>\
+		                </p>\
+		                <p>\
+		                     <br><a target='_blank' class='obvious-link center' href='http://sign2line.devan.im/'>Sign 2 Line</a>\
+		                </p>"
 	  	},
 	  	internets: {
-	  		title: "Internets",
+	  		title: "Micro Projects",
 	  		description: "<p>\
                                             Here are some simple web apps that I made for my convenience.\
                                         </p>\
