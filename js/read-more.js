@@ -11,7 +11,7 @@ var ReadMore = {
 </p> \
 <h3>As An ITLP Intern</h3> \
 <p> \
-	I collaborated on very large scale tasks across several business mannaging Highly Privilaged Accounts (HPA). HPAs are accounts that are critical to the success of the business. I automated remediation tracking of approximately twenty-four thousand accounts, and improved account holder communication by estabilishing an online web portal containing key information to account holders. \
+	I collaborated on very large scale tasks across several business mannaging Highly Privileged Accounts (HPA). HPAs are accounts that are critical to the success of the business. I automated remediation tracking of approximately twenty-four thousand accounts, and improved account holder communication by estabilishing an online web portal containing key information to account holders. \
 </p> \
 <h3>What I Learned</h3> \
 <p> \
@@ -22,14 +22,14 @@ var ReadMore = {
 	    	title: 'CGI',
 	    	description: '<h3>The CGI Group</h3> \
 <p> \
-	The CGI Group is a multinational information technology consulting, systems integration, outsourcing, and slocutions company. It is the fifth-largest independent IT services provider in the world. \
+	The CGI Group is a multinational information technology consulting, systems integration, outsourcing, and solutions company. It is the fifth-largest independent IT services provider in the world. \
 </p> \
 <h3>As A Software Development Intern</h3> \
 <p> \
 	As a software development intern I collaborated with an international team to deliver an, Enterprise, Java web application for the Bureau of Indian Affairs. The project that I worked on was a Trust Asset Account Management Software that was developed using the Scrum development methodology. \
 </p> \
 <p> \
-	I had the opportunity to work on end-to-end features of the application. I did everything fromm implementing XHTML views, using the PrimeFaces framework, to implementing business logic using the Java Spring Webflow framework. I innitiated the creation of on boarding documentation to assist senior developers who transitioned onto the project. I also created SQL scripts to assist in the process of ATSM regression testing.  \
+	I had the opportunity to work on end-to-end features of the application. I did everything from implementing XHTML views, using the PrimeFaces framework, to implementing business logic using the Java Spring Webflow framework. I initiated the creation of on boarding documentation to assist senior developers who transitioned onto the project. I also created SQL scripts to assist in the process of ATSM regression testing.  \
 </p> \
 <h3>What I Learned</h3> \
 <p> \
@@ -44,22 +44,22 @@ var ReadMore = {
 </p> \
 <h3>As A Student Consultant</h3> \
 <p> \
-	My primary role was to resolve a variety of customer issues, ranging from computer software issues to university logistics. I utilized problem solving skills to provide solutions for customers in a time sensitive enviornment.\
+	My primary role was to resolve a variety of customer issues, ranging from computer software issues to university logistics. I utilized problem solving skills to provide solutions for customers in a time sensitive environment.\
 </p> \
 <h3>What I Learned</h3> \
 <p> \
-	How to effectively communicate technical solutions to nontechnial people. How to communicate with a team via detailed documentation. \
+	How to effectively communicate technical solutions to non technical people. How to communicate with a team via detailed documentation. \
 </p>'
 	  	},
 		kanm: {
 	    	title: 'KANM Student Radio',
 	    	description: '<h3>KANM Student Radio</h3> \
 <p> \
-	"The college station of College Station." Founded in 1972 KANM is the student radio station at Texas A&M University. KANM\'s DJs program their own shows, playing music encompasssing virtually any and every genre.\
+	"The college station of College Station." Founded in 1972 KANM is the student radio station at Texas A&M University. KANM\'s DJs program their own shows, playing music encompassing virtually any and every genre.\
 </p> \
 <h3>As A Student Radio Engineer</h3> \
 <p> \
-	As a student radio engineer I had the opportunity to wwear many hats through my time at the radio station. I was a linux server administrator, a windows server administrator, radio broadcast administrator, and general computer technician. I put together radio broadcast consoles, and initiated the re-engineering of our streaming website. I managed a team of four other sub-engineers who assisted in projects, organized charity events, and presented weekly updates to the not so technical officer group.  \
+	As a student radio engineer I had the opportunity to wear many hats through my time at the radio station. I was a linux server administrator, a windows server administrator, radio broadcast administrator, and general computer technician. I put together radio broadcast consoles, and initiated the re-engineering of our streaming website. I managed a team of four other sub-engineers who assisted in projects, organized charity events, and presented weekly updates to the not so technical officer group.  \
 </p> \
 <h3>What I Learned</h3> \
 <p> \
@@ -84,7 +84,7 @@ var ReadMore = {
 			               	<img class="rm-p-img"src="img/sc/ch_sc/ch_sc1_iphone6_spacegrey_portrait.png"></img>\
 			            </p>\
 			            <p>\
-			                The idea for Culture Hunt came from the idea of being able to make cultural engagement into a game. It uses the Google Maps API in order to showcase different cultural sights in the Houston area. When the user click on a location they are presented with information about that location, such as a description, open hours, and a picture. The user can then select to "check-in," at which point the device they are on would call the Google Maps API again to test their location. If the user is close to the area they get points which contribute to their over all score so that they may compete to be the must culturally traveled in the Houston area, or just have fun seeing sights.\
+			                The idea for Culture Hunt came from the idea of being able to make cultural engagement into a game. It uses the Google Maps API in order to showcase different cultural sights in the Houston area. When the user click on a location they are presented with information about that location, such as a description, open hours, and a picture. The user can then select to "check-in," at which point the device they are on would call the Google Maps API again to test their location. If the user is close to the area they get points which contribute to their overall score so that they may compete to be the most culturally traveled in the Houston area, or just have fun seeing sights.\
 			            </p>\
 			            <p class="col1" >\
 			               	<img class="rm-p-img-small-left"src="img/sc/ch_sc/ch_sc2_iphone6_spacegrey_side1.png"></img>\
@@ -106,7 +106,7 @@ var ReadMore = {
 			               	<img class=\"rm-p-img-extra-small-left\"src=\"img/sc/smart/smart_sc1.png\"></img>\
 			            </p>\
 			            <p>\
-                            Smart App was a web app created at the A&M student run hackathon "Hackerbowl." The purpose of app was to help the user set and organize "S.M.A.R.T." goals. The app would walk the user through the process of setting goals, and then user could check back in on a regular basis and get points for working towards their goals. The app idea was simple, yet elegant in desgin. \
+                            Smart App was a web app created at the A&M student run hackathon "Hackerbowl." The purpose of app was to help the user set and organize "S.M.A.R.T." goals. The app would walk the user through the process of setting goals, and then user could check back in on a regular basis and get points for working towards their goals. The app idea was simple, yet elegant in design. \
                         </p>'
 	  	},
 		rubikscubesolver: {
@@ -120,7 +120,7 @@ var ReadMore = {
 					Building a backwards ray tracer was the final project for a computer graphics class that I had taken at Texas A&M. \
 				</p> \
 				<p> \
-					A ray tracer is a way of modeling the way that three deminsional objects in a space that interact with light. Following each light ray as it reflects of off each object, reflects onto other objects, and eventually reaches the viewer. A backwards ray tracer foolows the path of each light ray from the eye to each light source. \
+					A ray tracer is a way of modeling the way that three dimensional objects in a space that interact with light. Following each light ray as it reflects of off each object, reflects onto other objects, and eventually reaches the viewer. A backwards ray tracer follows the path of each light ray from the eye to each light source. \
 				</p>"
 	  	},
 	  	scheduler: {
@@ -130,13 +130,13 @@ var ReadMore = {
 			               	<img class=\"rm-p-img-large\"src=\"img/sc/hdc_sc1/hdc_sc1_imac2013_front.png\"></img>\
 			            </p>\
 			            <p> \
-							The HDC Tools project, is a project that I worked on for the Texas A&M Central Help Desk that I had initiated and worked on. The purpose of the project was to re-design an outdated system that the Help Desk is using in order to represent our scheduling system in a easy to read, mobile friendly manner. \
+							The HDC Tools project, is a project that I worked on for the Texas A&M Central Help Desk that I had initiated and worked on. The purpose of the project was to redesign an outdated system that the Help Desk is using in order to represent our scheduling system in a easy to read, mobile friendly manner. \
 						</p> \
 						    <p class=\"col1\" >\
 						       	<img class=\"rm-p-img-small-right\"src=\"img/sc/hdc_sc2/hdc_sc2_nexus4_portrait.png\"></img>\
 						    </p>\
 						<p> \
-						 	This project gave me a lot of experience in estabilishing an enterprise project from the project managment perspective. The project is still under development at the Help Desk, which I have left at this point. However, feel free to check out an intial prototype of the site bellow.\
+						 	This project gave me a lot of experience in establishing an enterprise project from the project management perspective. The project is still under development at the Help Desk, which I have left at this point. However, feel free to check out an initial prototype of the site bellow.\
 						</p> \
 						<p>\
 						    <a target="_blank" class="obvious-link center" href="http://devan.im/hdctools">HDC Tools</a><br>\
@@ -171,11 +171,11 @@ var ReadMore = {
                                         </p>\
                                         <p>\
                                             <a target='_blank' class='obvious-link' href='http://devan.im/quicknote/'>QuickNote</a><br>\
-                                            I made this app so that I could take quick notes on a pretty interface. I also used the SendGrid api, so that if you press shift+enter it will send it to me as an email. Try it out!\
+                                            I made this app so that I could take quick notes on a pretty interface. I also used the SendGrid api, so that if you press the right key combination it will send it to me as an email. Try it out!\
                                         </p>\
                                         <p>\
                                             <a target='_blank' class='obvious-link' href=' http://devan.im/class/'>BeatDown!</a><br>\
-                                            This is a simple site I made to showcase the classes I am taking and information about those classes that I could access quickly anywhere without having to worry about signing into different sites. Very useful for pulling up proffessors office locations as I walk there.\
+                                            This is a simple site I made to showcase the classes I am taking and information about those classes that I could access quickly anywhere without having to worry about signing into different sites. Very useful for pulling up professor's office locations as I walk there.\
                                         </p>\
                                         <p>\
                                             <a target='_blank' class='obvious-link' href=' http://devan.im/timer/'>StudyBreak</a><br>\
@@ -183,7 +183,7 @@ var ReadMore = {
                                         </p>\
                                         <p>\
                                             <a target='_blank' class='obvious-link' href=' http://devan.im/three/'>Three.js</a><br>\
-                                            This is my introductory level three.js web app. Right now, it is just a cube that you can movie with your mouse. I will expand on this in the future, because three.js is awesome and deserves more attention.\
+                                            This is my introductory level three.js web app. Right now, it is just a cube that you can move with your mouse. I will expand on this in the future, because three.js is awesome and deserves more attention.\
                                         </p>"
 	  	}
 	};
