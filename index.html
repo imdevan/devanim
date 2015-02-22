@@ -36,180 +36,172 @@ HD           H  ~ Devan Huapaya
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-        
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/fonts/genericons/genericons.css">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script src="js/read-more.js"></script>
+
+        <!-- Javascript - main.js file at bottom of body-->
+        <script type='text/javascript' src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head> 
     <body id="body">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+
+        <!-- Pre-Load Page -->
+        <div id="loader-wrapper">
+            <div id="loader"></div>
+            <div class="loader-section"></div>
+
+        </div>
+
         <!-- Page Menu -->
-        <ul id="nav">
-            <li><a href="#contact" id="contact-link">Contact</a></li>
-            <li><a href="#projects" id="portfolio-link">Projects</a></li>
+        <ul id="nav" class="default">
+            <li><a href="#body" id="about-me-link">//</a></li>
             <li><a href="#experience" id="portfolio-link" >Experience</a></li>
-            <li><a href="#body" id="about-me-link">Home</a></li>
+            <li><a href="#projects" id="portfolio-link">Projects</a></li>
+            <li><a href="#contact" id="contact-link">Contact</a></li>
         </ul>
 
-        <!-- Page Title -->
-        <span class="main-header">Hi, I'm Devan</span>  
-        
-        <div id="main-container" class="animated">
-
-
-            <!--hello-banner-->
-            <seciton id="my-home">
+        <!-- Home -->
+        <section id="home">
+            <div id="home-wrapper">
                 <div class="section-content">
-
-
-                    <!-- selfie -->
-                    <div id="home-img"></div>
-
-                    <div class="home-img-desc">
-                        Me, in my natural habitat
-                    </div>
-
-                    <!-- Vision Statement -->
-                    <p id="vision-statement">I like cats, colors, creativity, cooking, coding, cracking open books, contemplation, and collaboration</p>
+                    <h1 id="main-header">
+                        <span>Hi, I'm</span> <!-- <br> -->
+                        <span class="larger-font">Devan</span>
+                    </h1>      
 
                 </div>
-            </seciton><!--hello-banner-->
+            </div>
+        </section> <!-- End Home -->
+        
 
-            <!-- Experience -->
-            <section id="experience-section">
-                <div class="section-content" id="experience">
-                    <h1 class="section-title">- Work Experience -</h1>
+        <!-- Experience -->
+        <section id="experience-section">
+            <div class="section-content" id="experience">
+                
+                <h2 class="section-title"><hr/> Work Experience <hr/></h2>
+                <div class="row" id="jobs-held">
+                   
+
+                    <!-- GE -->
+                    <div class=" project three columns" id="read-more-ge">
+                        <div class="project-img" id="ge-img"></div>
+                        <div class="project-title" id="">GE</div>
+                    </div>  
+
+                    <!-- CGI -->
+                    <div class=" project three columns" id="read-more-cgi">
+                        <div class="project-img" id="cgi-img"></div>
+                        <div class="project-title" id="">CGI</div>
+                    </div>  
+
+                    <!-- Texas A&M -->
+                    <div class=" project three columns" id="read-more-hdc">
+                        <div class="project-img" id="hdc-img"></div>
+                        <div class="project-title" id="">Texas A&M</div>
+                    </div>  
+
+
+                    <!-- KANM -->
+                    <div class=" project three columns" id="read-more-kanm">
+                        <div class="project-img" id="kanm-img"></div>
+                        <div class="project-title" id="">KANM</div>
+                    </div>  
+
+                </div><!-- jobs -->
+
+            </div><!-- section-content -->
+        </section><!-- experience -->
+
+
+
+        <!-- Projects -->
+        <section id="projects-section ">
+            <div class="section-content">
+                <h2 class="section-title" id="projects"><hr/> Projects <hr/></h2>
+
+                <!-- Dumby Boxes -->
+                <div class="row" id="projects">
                     
-                    <!-- Dumby Boxes -->
-                    <div class="col4 p-section" id="jobs-held">
-                       
+                    <!-- Sign 2 Line -->
+                    <div class=" project three columns" id="read-more-sign2line">
+                        <div class="project-img" id="sign-2-line-img"></div>
+                        <div class="project-title" id="">Sign 2 Line</div>
+                    </div>  
 
-                        <!-- GE -->
-                        <div class="module  project" id="read-more-ge">
-                            <div class="project-img" id="ge-img"></div>
-                            <div class="project-title" id="">GE</div>
-                        </div>  
+                    <!-- Culture Hunt -->
+                    <div class=" project three columns" id="read-more-culturehunt">
+                        <div class="project-img" id="culture-hunt-img"></div>
+                        <div class="project-title" id="">Culture Hunt</div>
+                    </div>
 
-                        <!-- CGI -->
-                        <div class="module  project" id="read-more-cgi">
-                            <div class="project-img" id="cgi-img"></div>
-                            <div class="project-title" id="">CGI</div>
-                        </div>  
+                    <!-- Scheduler -->
+                    <div class=" project three columns" id="read-more-scheduler">
+                        <div class="project-img" id="hdctools-img"></div>
+                        <div class="project-title" id="">HDC Tools</div>
+                    </div>
 
-                        <!-- Texas A&M -->
-                        <div class="module  project" id="read-more-hdc">
-                            <div class="project-img" id="hdc-img"></div>
-                            <div class="project-title" id="">Texas A&M</div>
-                        </div>  
+                    <!-- Internets -->
+                    <div class=" project three columns" id="read-more-internets">
+                        <div class="project-img" id="internets-img"></div>
+                        <div class="project-title" id="">Micro Projects</div>
+                    </div>  
+                </div>
+                <div class="row" >
+                    <!-- Horsu Raysu was the real name of the game we made -->
+                    <div class=" project three columns" id="read-more-horsuraysu">
+                        <div class="project-img" id="horsu-raysu-img"></div>
+                        <div class="project-title" id="">The Race!</div>
+                    </div> 
 
+                    <!-- Smart App -->
+                    <div class=" project three columns" id="read-more-smart">
+                        <div class="project-img" id="smart-img"></div>
+                        <div class="project-title" id="">Smart App</div>    
+                    </div>  
 
-                        <!-- KANM -->
-                        <div class="module  project" id="read-more-kanm">
-                            <div class="project-img" id="kanm-img"></div>
-                            <div class="project-title" id="">KANM</div>
-                        </div>  
+                    <!-- Rubics Cube Solver -->
+                    <div class=" project three columns" id="read-more-rubikscubesolver">
+                        <div class="project-img" id="rubiks-cube-solver-img"></div>
+                        <div class="project-title" id="">Rubik's Cube Solver</div>
+                    </div>  
 
-                    </div><!-- jobs -->
-
-                </div><!-- section-content -->
-            </section><!-- experience -->
-
-
-
-            <!-- Projects -->
-            <section id="projects-section">
-                <div class="section-content">
-                    <h1 class="section-title" id="projects">- My Projects -</h1>
-
-                    <!-- Dumby Boxes -->
-                    <div class="col4 p-section" id="projects">
-                        
-                        <!-- Sign 2 Line -->
-                        <div class="module  project" id="read-more-sign2line">
-                            <div class="project-img" id="sign-2-line-img"></div>
-                            <div class="project-title" id="">Sign 2 Line</div>
-                        </div>  
-
-                        <!-- Culture Hunt -->
-                        <div class="module  project" id="read-more-culturehunt">
-                            <div class="project-img" id="culture-hunt-img"></div>
-                            <div class="project-title" id="">Culture Hunt</div>
-                        </div>
-
-                        <!-- Scheduler -->
-                        <div class="module  project" id="read-more-scheduler">
-                            <div class="project-img" id="hdctools-img"></div>
-                            <div class="project-title" id="">HDC Tools</div>
-                        </div>
-
-                        <!-- Internets -->
-                        <div class="module  project" id="read-more-internets">
-                            <div class="project-img" id="internets-img"></div>
-                            <div class="project-title" id="">Micro Projects</div>
-                        </div>  
+                    <!-- Ray Tracer -->
+                    <div class=" project three columns"  id="read-more-raytracer" >
+                        <div class="project-img" id="ray-tracer-img"></div>
+                        <div class="project-title" id="">Ray Tracer</div>
+                    </div>  
 
                     </div>
-                    <!-- End Col4 -->
+                    </div> <!-- <col></col>4 -->
 
-
-                    <div class="col4 p-section" id="projects">
-                        
-                        <!-- Horsu Raysu was the real name of the game we made -->
-                        <div class="module  project" id="read-more-horsuraysu">
-                            <div class="project-img" id="horsu-raysu-img"></div>
-                            <div class="project-title" id="">The Race!</div>
-                        </div> 
-
-                        <!-- Smart App -->
-                        <div class="module  project" id="read-more-smart">
-                            <div class="project-img" id="smart-img"></div>
-                            <div class="project-title" id="">Smart App</div>    
-                        </div>  
-                        
-                        <!-- Rubics Cube Solver -->
-                        <div class="module  project" id="read-more-rubikscubesolver">
-                            <div class="project-img" id="rubiks-cube-solver-img"></div>
-                            <div class="project-title" id="">Rubik's Cube Solver</div>
-                        </div>  
-
-                        <!-- Ray Tracer -->
-                        <div class="module  project"  id="read-more-raytracer" >
-                            <div class="project-img" id="ray-tracer-img"></div>
-                            <div class="project-title" id="">Ray Tracer</div>
-                        </div>  
-
-
-                        </div> <!-- col4 -->
-
-                </div><!-- section-content -->
-            </section><!-- experience -->
+            </div><!-- section-content -->
+        </section><!-- experience -->
 
 
 
             <!-- Contact -->
             <section id="contact-section">
                 <div class="section-content">
-                    <h1 class="section-title" id="contact">- Contact -</h1>
+                    <h2 class="section-title" id="contact"><hr/> Contact <hr/></h2>
 
                 <div id="contact-info">
-                    <h2 class="col1">
+                    <h2 class="column">
                         Let's chat about cool stuff.
                     </h2>
-                    <p class="col1"><a class="email" href="mailto:huapayadevan@tamu.edu?subject=Howdy, I just visited your website!">
+                    <p class=""><a class="email" href="mailto:huapayadevan@gmail.com">
                        huapayadevan<span class="atgmail">@gmail.com</span>
                         </a></p>
-                    <p class="col1 social">
+                    <p class="social">
                        <a href="https://github.com/imdevan" target="_blank"><span class="genericon-github"></span></a>
                        <a href="http://codepen.io/devanh/" target="_blank"><span class="genericon-codepen"></span></a>
                        <a href="https://www.facebook.com/devan.huapaya" target="_blank"><span class="genericon-facebook-alt"></span></a>
-                       <a href="https://twitter.com/DevansCuriosity/" target="_blank"><span class="genericon-twitter"></span></a>
+                       <a href="https://twitter.com/DevanIpsum/" target="_blank"><span class="genericon-twitter"></span></a>
                     </p>
                 </div>
 
@@ -220,9 +212,9 @@ HD           H  ~ Devan Huapaya
         </div>
 
         <!-- Read More Pop Up -->
-          <div class='read-more-content animated'>
+          <div class='read-more-content'>
             <div class='read-more-header'>
-              <span class='read-more-exit-button genericon-next'></span>
+              <span class='read-more-exit-button genericon-close'></span>
               <span class='read-more-title'>Job of Project Title</span>
             </div>
             <div class='read-more-description'>
@@ -234,9 +226,12 @@ HD           H  ~ Devan Huapaya
         
 
         <!-- Javascript -->
+        <!-- JQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/main.js"></script>
-        <!-- // <script src="js/min.js"></script> -->
+
+        <!-- Custom Javascript -->
+        <script type='text/javascript' src="js/main.js"></script>
+        <script type='text/javascript' src="js/read-more.js"></script>
     </body>
 </html>

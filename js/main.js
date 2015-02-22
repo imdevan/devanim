@@ -1,35 +1,85 @@
-/* Variables
+
+ /* Variables
 ========================================================================== */
 
-/* Read More Variables */
+// Convention from Javascript: The Good Parts
+// var THE = {
+//   readmore: {
+//     openButton: $('.project'),
+//     exitButton: $('.read-more-exit-button'),
+//     title: $('.read-more-title'),
+//     content: $('.read-more-content')
+//   },
+//   home:{
+//     div: $('#home'),
+//     wrapper: $('#home-wrapper')
+//   },
+//   mainC: $('#main-container'),
+//   win: $(window),
+//   fold: 0,
+//   scrollPosition: 0,
+//   mobile: 0,
+//   nav: {
+//     isDown: true,
+//     lastScrollTop: 0,
+//     div: $('#nav'),
+//     height:0
+//   },
+//   init: function(){
+//     this.fold = this.home.div.outerHeight() * 0.5;
+//     this.nav.height = this.nav.div.outerHeight();
+//     this.mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+//   }
+// };
+
+// THE.init();
+
 var rmButton = $('.project'),
     rmExitButton = $('.read-more-exit-button'),
     rmTitle = $('.read-more-title'),
     rmDescription = $('.read-more-description p'),
     rmContent = $('.read-more-content'),
-    homeImg = $('#home-img'),
-    homeImgDesc = $('.home-img-desc'),
+    home = $("#home"),
+    homeWrapper = $("#home-wrapper"),
     mainC = $('#main-container'),
     win = $(window),
-    scrollPosition;
+    theFold = home.outerHeight() * 0.5,
+    scrollPosition,
+    mobile;
+
+var navIsDown = true,
+    lastScrollTop = 0,
+    nav = $('#nav'),
+    navHeight = nav.outerHeight();
 
 
 
-/* Home Image Hover Effect
+/* Home Hide Fuction
 ========================================================================== */
-homeImg.hover(function(){
-    homeImgDesc.addClass('display-true');
-  },function(){
-    homeImgDesc.removeClass('display-true');
-  }
-);
+// Consider implementing: if the change in mouse position is greater than 200 than fade, otherwise don't
+function hideHomeBackgroundOnScrollDown(){
+  // Do nothing on mobile devices
+  if(mobile) return;
+
+  // otherwise change opacity of homeWrapper
+  if(scrollPosition < theFold)
+    homeWrapper.css('opacity', (theFold - scrollPosition) / theFold);
+    // homeWrapper.css('opacity', 1);
+  else
+    homeWrapper.css('opacity', 0);
+}
 
 /* Read More 
 ========================================================================== */
-document.write("<scr" + "ipt type='text/javascript' src='js/read-more.js'><" + "/scr" + "ipt>");
+// Show/Hide "read more" section
+function readMoreFadeToggle(){
+  if(rmContent.hasClass('fadeIn'))
+    rmContent.toggleClass('fadeIn');
+  else
+    rmContent.toggleClass('fadeIn');
+}
 
-
-/* Read More Show */
+// When a user clicks on a project
 rmButton.on('click', function(){
   // Get read-more content
   var _id = $(this).attr('id').replace('read-more-', '');
@@ -42,89 +92,66 @@ rmButton.on('click', function(){
   // set exit button to halfway on title 
   rmExitButton.css('top', parseInt(rmTitle.css('line-height')) - parseInt(rmExitButton.css('line-height'))/2);
 
-  // Remove leftover css from remove
-  rmContent.removeClass('fadeOutLeft');
-  mainC.removeClass('fadeInRight');
-
-  // Show read-more content
-  rmContent.show();
   // Fade in
-  rmContent.addClass('fadeInLeft');
-  mainC.addClass('fadeOutRight');
-
+  readMoreFadeToggle(); 
 });
 
-/* Read More Exit */
+// When exit button is clicked
 rmExitButton.on('click', function(){
-  // Remove leftover css 
-  rmContent.removeClass('fadeInLeft');
-  mainC.removeClass('fadeOutRight');
-
-
-  // Show read-more content
-  rmContent.addClass('fadeOutLeft', function(){
-    rmContent.hide();
-  });
-  mainC.addClass('fadeInRight');
-
+  readMoreFadeToggle();
 });
+
+// When exit or backspace is pressed
+$(document).keyup(function(e){
+  if(rmContent.hasClass('fadeIn') && e.keyCode == 27 ){
+    e.preventDefault();
+    readMoreFadeToggle();
+  }
+}); 
 
 
 /* Menu Hide Function 
 ========================================================================== */
-var navIsDown = true,
-    lastScrollTop = 0,
-    nav = $('#nav'),
-    navHeight = nav.outerHeight();
-
 function hideNav(){
-    // nav.fadeOut ();
     navIsDown = false;
     nav.css('top', -navHeight).css('opacity', '0');
 };
-function showNav(){
-    // nav.fadeIn();
-    navIsDown = true;
-    nav.css('top', '0px').css('opacity', '1');
-};
+
 function hideNavOnScrollDown(){
+
+  if(scrollPosition > theFold)
+    nav.addClass('solid');
+  else
+    nav.removeClass('solid');
+  
   if(navIsDown && scrollPosition > lastScrollTop){
-    // hide nav bar
     hideNav();
   }
+
   else if(!navIsDown && scrollPosition < lastScrollTop){
     // show nav bar
-    showNav();
+    navIsDown = true;
+    nav.css('top', '0px').css('opacity', '1');
   }
-
   // update last scroll position
   lastScrollTop = scrollPosition;
-};
-function manageNavShadow(){
-
-  if(scrollPosition == 0){
-    nav.removeClass("border-shadow");
-  }
-  else{
-    nav.addClass("border-shadow");
-  }
 };
 
 win.scroll(function(){
   scrollPosition = win.scrollTop();
-  console.log(scrollPosition);
   hideNavOnScrollDown();
-  manageNavShadow();;
+  hideHomeBackgroundOnScrollDown();
 });
 
 /* Menu Scroll Effects
 ========================================================================== */
-
-$('a[href^="#"]').click(function(event) {
+// Change to account
+$('#nav li').click(function(event) {
     event.preventDefault();
-    var id = $(this).attr("href");
+    var id = $(this).find('a').attr("href");
     var target = $(id).offset().top;
-    $('html, body').animate({scrollTop:target}, 500, function(){
+
+    $('html, body').animate({scrollTop:target}, 500, "swing", function(){
 
       if(id != "#body"){
         hideNav();
@@ -135,3 +162,9 @@ $('a[href^="#"]').click(function(event) {
 
     });
   });
+
+
+// Remove preload screen
+$(window).load(function(){
+  $('body').addClass('loaded');
+});

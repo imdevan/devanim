@@ -18,6 +18,7 @@ var ReadMore = {
 	At GE Oil & Gas I learned what it takes to be able to manage massive tasks across several business in order to ensure that solutions are delivered on time. The answer: team work. Meeting on a regular schedule with Identity management leads from GE Aviation, Capital, Power & Water, Energy Management, and Corporate, we discussed complications that each of our teams were having and what the other had done to work through them.\
 </p>'
 	  	},
+		
 		cgi: {
 	    	title: 'CGI',
 	    	description: '<h3>The CGI Group</h3> \
