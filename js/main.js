@@ -166,5 +166,6 @@ $('#nav li').click(function(event) {
 
 // Remove preload screen
 $(window).load(function(){
+  $('#home').height($('#home').outerHeight());
   $('body').addClass('loaded');
 });
