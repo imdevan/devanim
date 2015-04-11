@@ -69,7 +69,7 @@ function hideHomeBackgroundOnScrollDown(){
     homeWrapper.css('opacity', 0);
 }
 
-/* Read More 
+/* Read More
 ========================================================================== */
 // Show/Hide "read more" section
 function readMoreFadeToggle(){
@@ -89,11 +89,11 @@ rmButton.on('click', function(){
   rmTitle.html(_this.title);
   rmDescription.html(_this.description);
 
-  // set exit button to halfway on title 
+  // set exit button to halfway on title
   rmExitButton.css('top', parseInt(rmTitle.css('line-height')) - parseInt(rmExitButton.css('line-height'))/2);
 
   // Fade in
-  readMoreFadeToggle(); 
+  readMoreFadeToggle();
 });
 
 // When exit button is clicked
@@ -107,10 +107,10 @@ $(document).keyup(function(e){
     e.preventDefault();
     readMoreFadeToggle();
   }
-}); 
+});
 
 
-/* Menu Hide Function 
+/* Menu Hide Function
 ========================================================================== */
 function hideNav(){
     navIsDown = false;
@@ -123,7 +123,7 @@ function hideNavOnScrollDown(){
     nav.addClass('solid');
   else
     nav.removeClass('solid');
-  
+
   if(navIsDown && scrollPosition > lastScrollTop){
     hideNav();
   }
