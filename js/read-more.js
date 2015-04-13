@@ -161,19 +161,10 @@ var ReadMore = {
 	               	<img class=\"rm-p-img-large\"src=\"img/sc/sign2line/sign2line sc1_imac2013_front.png\"></img>\
 	            </p>\
 	            <p>\
-                    Sign-2-Line is an app that I made with 2 other Texas A&M students at LSU's first hackathon 'GeauxHack.' The purpose of the app is to translate American Sign Language into text using the <a target='_blank' class='obvious-link' href='https://www.leapmotion.com/'>Leap Motion.</a> We managed to code around 10 different phrases that the Leap Motion detected, and printed to the screen.  \
+                	Pennjamin's Travels is game that we made for PennApps using the Muse eeg device to detect the player's brain waves and determine there level of focus. \    
                 </p>\
                 <p>\
-                    In addition to translating ASL, we used the SendGrid api to add the ability to email a record of the translation to a user, so that they can keep track of their conversations. \
-                </p>\
-                <p>\
-                    Feel free to check out the app bellow, if you have a Leap Motion. You can also check out our page on Challenge Post, which is currently featured as a staff pick! \
-                </p>\
-                <p>\
-                    <br><a target='_blank' class='obvious-link center' href='http://challengepost.com/software/sign2line-pofh7#_=_'>Challenge Post Page</a>\
-                </p>\
-                <p>\
-                     <br><a target='_blank' class='obvious-link center' href='http://sign2line.devan.im/'>Sign 2 Line</a>\
+                    As the player traverses an ice cave as the detlightful penguin Pennjamin, the Penn Apps penguin.  \
                 </p>"
 	  	},
 		breathe: {
