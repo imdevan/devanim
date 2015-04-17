@@ -170,23 +170,11 @@ var ReadMore = {
 		breathe: {
 	    	title: 'Breathe',
 	    	description: "\
-	            <p class=\"col1\" >\
-	               	<img class=\"rm-p-img-large\"src=\"img/sc/sign2line/sign2line sc1_imac2013_front.png\"></img>\
-	            </p>\
 	            <p>\
-                    Sign-2-Line is an app that I made with 2 other Texas A&M students at LSU's first hackathon 'GeauxHack.' The purpose of the app is to translate American Sign Language into text using the <a target='_blank' class='obvious-link' href='https://www.leapmotion.com/'>Leap Motion.</a> We managed to code around 10 different phrases that the Leap Motion detected, and printed to the screen.  \
-                </p>\
+                	Breathe is a Windows Desktop app that was made during the Windows Hackathon at Texas A&M University.     
+               	</p>\
                 <p>\
-                    In addition to translating ASL, we used the SendGrid api to add the ability to email a record of the translation to a user, so that they can keep track of their conversations. \
-                </p>\
-                <p>\
-                    Feel free to check out the app bellow, if you have a Leap Motion. You can also check out our page on Challenge Post, which is currently featured as a staff pick! \
-                </p>\
-                <p>\
-                    <br><a target='_blank' class='obvious-link center' href='http://challengepost.com/software/sign2line-pofh7#_=_'>Challenge Post Page</a>\
-                </p>\
-                <p>\
-                     <br><a target='_blank' class='obvious-link center' href='http://sign2line.devan.im/'>Sign 2 Line</a>\
+                	The purpose of this app was to disengage users from the work (or lack their of) that they were doing. The user would be calmed and centered, ready to re-engage their projects with fresh minds.\    
                 </p>"
 	  	},
 		msic: {
