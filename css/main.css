@@ -738,6 +738,23 @@ there.
   #internets-img{
       background-image: url('../img/cat.jpg');
   }
+  #chrome-ext-img{
+      background-image: url('../img/chrome_ext.png');
+      background-position: center;
+  }
+  #jmpr-img{
+      background-image: url('../img/jmpr.png');
+      background-position: 45%;
+  }
+  #msic-img{
+      background-image: url('../img/cat.jpg');
+  }
+  #attack-on-oculus-img{
+      background-image: url('../img/cat.jpg');
+  }
+
+
+
 
   /* Contact Section
   ========================================================================== */
